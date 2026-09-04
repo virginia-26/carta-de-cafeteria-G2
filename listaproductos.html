@@ -4,91 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-    <style>
-    
-  .boton-categoria {
-  background-color: #2C4A32;
-  padding: 20px;
-  border-radius: 12px;
- width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  transition: all 0.2s ease;
-}
-.boton-categoria:hover {
-  background-color: #3E6349;
-  transform: translateY(-3px);
-  cursor: pointer;
-}
-.icono-categoria {
-  width: 50px;
-  height: 50px;
-  background-color: #E8D3B8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-}
-.titulo-principal {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 700;
-  color: #2C4A32;
-  text-align: center;
-  margin-bottom: 5px;
-  letter-spacing: 0.5px;
-}
-
-.subtitulo-principal {
-  font-family: ''Playfair Display', serif;
-  font-style: italic;
-  font-size: 18px;
-  color: #A9824A;
-  text-align: center;
-  margin-bottom: 30px;
-}
-.linea-divisoria {
-  width: 150px;
-  border: none;
-  border-top: 2px solid #A9824A;
-  margin: 0 auto 30px auto;
-}
-.palabra-destacada {
-  color: #A9824A;
-  font-style: italic;
-}
-.grilla-categorias {
-  display: grid;
- grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 0 20px;
-}
-.hint {
-  margin-left: auto;
-  color: #E8D3B8;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-}
-.texto-categoria {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 17px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #f5e2be;
-  margin: 0;
-}
-body {
-  background-color: #F3E9DA;
-  margin: 0;
-  padding: 30px 0;
-}
-
-    </style>
 </head>
 <body>
    <h1 class="titulo-principal">¿Qué te tienta <span class="palabra-destacada">hoy</span>?</h1>
@@ -96,37 +11,49 @@ body {
 <hr class="linea-divisoria">
 <main class="grilla-categorias">
    <div class="boton-categoria">
- <div class="icono-categoria">🥐</div>
+ <div class="icono-categoria">
+  <img src="./imagenes/desayuno.jpg" alt="Desayunos y Meriendas">
+ </div>
   <p class="texto-categoria">Desayunos y Meriendas</p>
   <span class="hint">Tocá aquí</span>
 </div>
 
 <div class="boton-categoria">
- <div class="icono-categoria">🍰</div>
+ <div class="icono-categoria">
+  <img src="./imagenes/torta.jpg" alt="Tortas y Tostados">
+ </div>
   <p class="texto-categoria">Tortas y Tostados</p>
   <span class="hint">Tocá aquí</span>
 </div>
 
 <div class="boton-categoria">
-  <div class="icono-categoria">🎂</div> 
+  <div class="icono-categoria">
+  <img src="./imagenes/dulce.jpg" alt="Dulces, Clásicos y Tentaciones">
+  </div>
   <p class="texto-categoria">Dulces, Clásicos y Tentaciones</p>
   <span class="hint">Tocá aquí</span>
 </div>
 
 <div class="boton-categoria">
-  <div class="icono-categoria">☕</div>  
+  <div class="icono-categoria">
+  <img src="./imagenes/cafeteria.jpg" alt="Cafetería">
+  </div>
   <p class="texto-categoria">Cafetería</p>
   <span class="hint">Tocá aquí</span>
 </div>
 
 <div class="boton-categoria">
- <div class="icono-categoria">🥤</div> 
+ <div class="icono-categoria">
+  <img src="./imagenes/bebida.jpg" alt="Bebidas">
+ </div>
   <p class="texto-categoria">Bebidas</p>
   <span class="hint">Tocá aquí</span>
 </div>
 
 <div class="boton-categoria">
-<div class="icono-categoria">🍨</div> 
+<div class="icono-categoria">
+  <img src="./imagenes/helado.jpg" alt="Copas Heladas">
+</div>
   <p class="texto-categoria">Copas Heladas</p>
   <span class="hint">Tocá aquí</span>
 </div>
