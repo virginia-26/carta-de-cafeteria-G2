@@ -1,0 +1,61 @@
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{0}: checkout: moving from master to dulces
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{1}: checkout: moving from dulces to master
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{2}: checkout: moving from inicio to dulces
+[33m9b11a39[m[33m ([m[1;31morigin/inicio[m[33m, [m[1;32minicio[m[33m)[m refs/remotes/origin/inicio@{0}: update by push
+[33m9b11a39[m[33m ([m[1;31morigin/inicio[m[33m, [m[1;32minicio[m[33m)[m refs/heads/inicio@{0}: commit: se modificaron las imagenes
+[33m9b11a39[m[33m ([m[1;31morigin/inicio[m[33m, [m[1;32minicio[m[33m)[m HEAD@{3}: commit: se modificaron las imagenes
+[33mb974793[m HEAD@{4}: checkout: moving from cafeteria to inicio
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{5}: checkout: moving from dulces to cafeteria
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{6}: checkout: moving from master to dulces
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m refs/heads/dulces@{0}: branch: Created from master
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{7}: checkout: moving from cafeteria to master
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{8}: checkout: moving from master to cafeteria
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m refs/heads/cafeteria@{0}: branch: Created from master
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m refs/heads/master@{0}: pull: Fast-forward
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m refs/remotes/origin/master@{0}: pull: fast-forward
+[33m6b07666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdulces[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcafeteria[m[33m)[m HEAD@{9}: pull: Fast-forward
+[33m82cd0ac[m HEAD@{10}: checkout: moving from master to master
+[33m82cd0ac[m refs/heads/master@{1}: pull: Fast-forward
+[33m1dd061b[m[33m ([m[1;31morigin/listaproductos[m[33m)[m refs/remotes/origin/listaproductos@{0}: pull: storing head
+[33m82cd0ac[m refs/remotes/origin/master@{1}: pull: fast-forward
+[33m82cd0ac[m HEAD@{11}: pull: Fast-forward
+[33m13de3d8[m HEAD@{12}: checkout: moving from master to master
+[33m13de3d8[m refs/heads/master@{2}: pull: Fast-forward
+[33m13de3d8[m HEAD@{13}: pull: Fast-forward
+[33mc673148[m HEAD@{14}: checkout: moving from inicio to master
+[33m3d377ea[m[33m ([m[1;35mrefs/stash[m[33m)[m refs/stash@{0}: WIP on inicio: b974793 feat: actualiza pagina de inicio
+[33mb974793[m HEAD@{15}: reset: moving to HEAD
+[33m13de3d8[m refs/remotes/origin/master@{2}: pull: fast-forward
+[33mb974793[m refs/remotes/origin/inicio@{1}: update by push
+[33mb974793[m refs/heads/inicio@{1}: commit: feat: actualiza pagina de inicio
+[33mb974793[m HEAD@{16}: commit: feat: actualiza pagina de inicio
+[33m9a5d1ba[m refs/remotes/origin/inicio@{2}: update by push
+[33m9a5d1ba[m refs/heads/inicio@{2}: commit: feat: agrega pagina de inicio
+[33m9a5d1ba[m HEAD@{17}: commit: feat: agrega pagina de inicio
+[33mc673148[m HEAD@{18}: checkout: moving from inicio to inicio
+[33mc673148[m HEAD@{19}: checkout: moving from inicio to inicio
+[33mc673148[m HEAD@{20}: checkout: moving from master to inicio
+[33mc673148[m refs/heads/inicio@{3}: branch: Created from master
+[33mc673148[m HEAD@{21}: checkout: moving from sidebar to master
+[33mc673148[m refs/heads/master@{3}: 
+[33mc673148[m refs/remotes/origin/HEAD@{0}: fetch
+[33mc673148[m refs/remotes/origin/master@{3}: fetch --all --no-write-fetch-head: fast-forward
+[33m4e52858[m[33m ([m[1;31morigin/produccion[m[33m)[m refs/remotes/origin/produccion@{0}: fetch --all --no-write-fetch-head: fast-forward
+[33mc7d530c[m[33m ([m[1;31morigin/testing[m[33m)[m refs/remotes/origin/testing@{0}: fetch --all --no-write-fetch-head: fast-forward
+[33md0dd9ea[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m)[m refs/remotes/origin/sidebar@{0}: update by push
+[33md0dd9ea[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m)[m refs/heads/sidebar@{0}: commit: nuevo boton
+[33md0dd9ea[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m)[m HEAD@{22}: commit: nuevo boton
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m HEAD@{23}: checkout: moving from testing to sidebar
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/remotes/origin/testing@{1}: update by push
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m HEAD@{24}: checkout: moving from produccion to testing
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/remotes/origin/produccion@{1}: update by push
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m HEAD@{25}: checkout: moving from master to produccion
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/remotes/origin/sidebar@{1}: update by push
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/heads/sidebar@{1}: branch: Created from master
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m HEAD@{26}: checkout: moving from master to master
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/heads/testing@{0}: branch: Created from master
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/heads/produccion@{0}: branch: Created from master
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m HEAD@{27}: checkout: moving from master to master
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/remotes/origin/master@{4}: update by push
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m refs/heads/master@{4}: commit (initial): subir README
+[33m721b5eb[m[33m ([m[1;32mtesting[m[33m, [m[1;32mproduccion[m[33m)[m HEAD@{28}: commit (initial): subir README
