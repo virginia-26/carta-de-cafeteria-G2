@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wöllen - Tu Opinión</title>
+</head>
+
+<body>
+
+    <header>
+        <center>
+            <h1><a href="inicio.html%20.html">← WÖLLEN</a></h1>
+            <h2>Contanos tu opinión</h2>
+            <p>Tu experiencia nos ayuda a mejorar cada día.</p>
+        </center>
+    </header>
+
+    <main>
+
+        <form action="mailto:estudiosecrestat@hotmail.com" method="post" enctype="text/plain">
+
+            <fieldset>
+                <legend>¿Qué producto/s consumiste?</legend>
+
+                <input type="checkbox" id="prod-desayunos" name="producto" value="Desayunos y Meriendas">
+                <label for="prod-desayunos">Desayunos y Meriendas</label><br>
+
+                <input type="checkbox" id="prod-tortas" name="producto" value="Tortas y Tostados">
+                <label for="prod-tortas">Tortas y Tostados</label><br>
+
+                <input type="checkbox" id="prod-dulces" name="producto" value="Dulces, Clásicos y Tentaciones">
+                <label for="prod-dulces">Dulces, Clásicos y Tentaciones</label><br>
+
+                <input type="checkbox" id="prod-cafeteria" name="producto" value="Cafetería">
+                <label for="prod-cafeteria">Cafetería</label><br>
+
+                <input type="checkbox" id="prod-bebidas" name="producto" value="Bebidas">
+                <label for="prod-bebidas">Bebidas</label><br>
+
+                <input type="checkbox" id="prod-copas" name="producto" value="Copas Heladas">
+                <label for="prod-copas">Copas Heladas</label><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Calificación</legend>
+
+                <input type="radio" id="cal-1" name="calificacion" value="1">
+                <label for="cal-1">1</label>
+
+                <input type="radio" id="cal-2" name="calificacion" value="2">
+                <label for="cal-2">2</label>
+
+                <input type="radio" id="cal-3" name="calificacion" value="3">
+                <label for="cal-3">3</label>
+
+                <input type="radio" id="cal-4" name="calificacion" value="4">
+                <label for="cal-4">4</label>
+
+                <input type="radio" id="cal-5" name="calificacion" value="5">
+                <label for="cal-5">5</label>
+            </fieldset>
+
+            <br>
+
+            <label for="comentario">Tu comentario:</label><br>
+            <textarea id="comentario" name="comentario" rows="5" cols="50" placeholder="Contanos qué te pareció..."></textarea>
+
+            <br><br>
+
+            <button type="submit">Enviar opinión</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Wöllen Heladería y Cafetería</p>
+    </footer>
+
+</body>
+</html>
