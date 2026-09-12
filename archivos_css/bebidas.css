@@ -1,0 +1,135 @@
+:root {
+  --crema: #F3E9DA;
+  --beige: #E8D3B8;
+  --dorado: #A9824A;
+  --verde: #2C4A32;
+  --espresso: #2B1710;
+  --blanco: #FBF7F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 14px 50px;
+  background-color: var(--crema);
+  font-family: 'Jost', sans-serif;
+}
+
+/* Título / botón de volver */
+.titulo-categoria {
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.volver-categoria {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--espresso);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.volver-categoria:active {
+  color: var(--dorado);
+}
+
+/* La tabla entera se convierte en una lista de tarjetas apiladas */
+.carta-productos {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: block;
+}
+
+.carta-productos tbody,
+.carta-productos tr,
+.carta-productos td,
+.carta-productos th {
+  display: block;
+  width: 100%;
+}
+
+/* Encabezados de sección (FRUTALES, REFRESCANTES, etc) */
+.carta-productos th {
+  background-color: var(--verde);
+  color: var(--blanco);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding: 10px 12px;
+  margin: 28px 0 12px;
+  border-radius: 8px;
+}
+
+.carta-productos tr:first-child th {
+  margin-top: 0;
+}
+
+/* Cada fila de producto se convierte en tarjeta horizontal */
+.carta-productos tr:has(td) {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--blanco);
+  border: 1px solid var(--beige);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+/* Celda de la imagen */
+.carta-productos td:first-child {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.carta-productos td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Celda del texto */
+.carta-productos td:last-child {
+  flex: 1;
+}
+
+.carta-productos strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--verde);
+  margin-bottom: 2px;
+}
+
+.carta-productos td:last-child {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.82rem;
+  color: var(--espresso);
+  line-height: 1.4;
+}
+
+/* En pantallas más grandes, un poco más de aire */
+@media (min-width: 600px) {
+  .carta-productos tr:has(td) {
+    padding: 14px 20px;
+  }
+
+  .carta-productos td img {
+    width: 76px;
+    height: 76px;
+  }
+}

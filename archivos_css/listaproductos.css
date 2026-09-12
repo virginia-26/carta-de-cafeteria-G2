@@ -1,0 +1,160 @@
+:root {
+  --crema: #F3E9DA;
+  --beige: #E8D3B8;
+  --dorado: #A9824A;
+  --verde: #2C4A32;
+  --espresso: #2B1710;
+  --blanco: #FBF7F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+  background-color: var(--crema);
+  font-family: 'Jost', sans-serif;
+  text-align: center;
+}
+
+/* Volver al inicio */
+.volver-inicio {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--dorado);
+  text-decoration: none;
+}
+
+/* Título principal */
+.titulo-principal {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--espresso);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.palabra-destacada {
+  color: var(--dorado);
+  font-style: italic;
+}
+
+/* Subtítulo */
+.subtitulo-principal {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--espresso);
+  margin-bottom: 20px;
+}
+
+/* Línea divisoria */
+.linea-divisoria {
+  border: none;
+  border-top: 2px solid var(--dorado);
+  width: 80%;
+  max-width: 300px;
+  margin: 16px auto 30px;
+}
+
+/* --- GRILLA MOBILE: la tabla se apila en 1 columna --- */
+.grilla-categorias table,
+.grilla-categorias tbody,
+.grilla-categorias tr,
+.grilla-categorias td {
+  display: block;
+  width: 100%;
+}
+
+.grilla-categorias table {
+  border-spacing: 0;
+}
+
+.grilla-categorias td {
+  margin-bottom: 16px;
+}
+
+/* Cada botón/tarjeta de categoría, ancho completo y touch-friendly */
+.boton-categoria {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  background-color: var(--blanco);
+  border: 1px solid var(--beige);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-decoration: none;
+  text-align: left;
+  min-height: 64px;
+}
+
+.boton-categoria:active {
+  border-color: var(--dorado);
+  background-color: var(--beige);
+}
+
+.boton-categoria img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Texto de cada categoría */
+.texto-categoria {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--verde);
+  line-height: 1.25;
+}
+
+/* Hint "Tocá aquí" */
+.hint {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.78rem;
+  color: var(--dorado);
+  margin-top: 2px;
+}
+
+/* Si alguna vez lo abren desde una pantalla más grande (tablet/desktop),
+   volvemos a la grilla de 2 columnas */
+@media (min-width: 600px) {
+  .grilla-categorias table,
+  .grilla-categorias tbody,
+  .grilla-categorias tr,
+  .grilla-categorias td {
+    display: revert;
+    width: auto;
+  }
+
+  .grilla-categorias table {
+    border-spacing: 20px;
+    margin: 0 auto;
+  }
+
+  .boton-categoria {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 220px;
+  }
+
+  .boton-categoria img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+}
