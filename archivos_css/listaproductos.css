@@ -21,28 +21,38 @@ body {
 
 /* Volver al inicio */
 .volver-inicio {
-  display: inline-block;
-  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
   font-family: 'Jost', sans-serif;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: var(--dorado);
   text-decoration: none;
+}
+
+.volver-inicio:active {
+  color: var(--verde);
 }
 
 /* Título principal */
 .titulo-principal {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   color: var(--espresso);
-  margin-bottom: 8px;
-  line-height: 1.2;
+  margin: 0 0 6px;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
 }
 
 .palabra-destacada {
   color: var(--dorado);
   font-style: italic;
+  font-weight: 600;
 }
 
 /* Subtítulo */
@@ -50,18 +60,18 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: var(--espresso);
-  margin-bottom: 20px;
+  margin: 0 0 24px;
 }
 
-/* Línea divisoria */
+/* Línea divisoria, más fina y decorativa */
 .linea-divisoria {
   border: none;
-  border-top: 2px solid var(--dorado);
-  width: 80%;
-  max-width: 300px;
-  margin: 16px auto 30px;
+  height: 2px;
+  width: 70px;
+  background-color: var(--dorado);
+  margin: 0 auto 36px;
 }
 
 /* --- GRILLA MOBILE: la tabla se apila en 1 columna --- */
@@ -81,7 +91,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* Cada botón/tarjeta de categoría, ancho completo y touch-friendly */
+/* Cada botón/tarjeta de categoría */
 .boton-categoria {
   display: flex;
   align-items: center;
@@ -94,6 +104,7 @@ body {
   text-decoration: none;
   text-align: left;
   min-height: 64px;
+  box-shadow: 0 2px 6px rgba(43, 23, 16, 0.08);
 }
 
 .boton-categoria:active {
@@ -114,9 +125,10 @@ body {
   display: block;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--verde);
   line-height: 1.25;
+  letter-spacing: 0.3px;
 }
 
 /* Hint "Tocá aquí" */
@@ -124,13 +136,13 @@ body {
   display: block;
   font-family: 'Jost', sans-serif;
   font-weight: 300;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   color: var(--dorado);
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
-/* Si alguna vez lo abren desde una pantalla más grande (tablet/desktop),
-   volvemos a la grilla de 2 columnas */
 @media (min-width: 600px) {
   .grilla-categorias table,
   .grilla-categorias tbody,

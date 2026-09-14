@@ -68,32 +68,13 @@ body {
 
 .carta-productos tbody,
 .carta-productos tr,
-.carta-productos td,
-.carta-productos th {
+.carta-productos td {
   display: block;
   width: 100%;
 }
 
-/* Encabezados de sección (FRUTALES, REFRESCANTES, etc) */
-.carta-productos th {
-  background-color: var(--verde);
-  color: var(--blanco);
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 1.5px;
-  text-align: center;
-  padding: 10px 12px;
-  margin: 28px 0 12px;
-  border-radius: 8px;
-}
-
-.carta-productos tr:first-child th {
-  margin-top: 0;
-}
-
 /* Cada fila de producto se convierte en tarjeta horizontal */
-.carta-productos tr:has(td) {
+.carta-productos tr {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -121,6 +102,11 @@ body {
 /* Celda del texto */
 .carta-productos td:last-child {
   flex: 1;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.82rem;
+  color: var(--espresso);
+  line-height: 1.4;
 }
 
 .carta-productos strong {
@@ -132,17 +118,9 @@ body {
   margin-bottom: 2px;
 }
 
-.carta-productos td:last-child {
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-  font-size: 0.82rem;
-  color: var(--espresso);
-  line-height: 1.4;
-}
-
 /* En pantallas más grandes, un poco más de aire */
 @media (min-width: 600px) {
-  .carta-productos tr:has(td) {
+  .carta-productos tr {
     padding: 14px 20px;
   }
 
