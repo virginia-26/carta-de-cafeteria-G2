@@ -1,0 +1,341 @@
+/* =====================================
+   WÖLLEN - INICIO
+   DISEÑO PARA CELULAR
+   ===================================== */
+
+
+/* PALETA DE COLORES */
+
+:root {
+    --crema: #F3E9DA;
+    --beige: #E8D3B8;
+    --dorado: #A9824A;
+    --verde: #2C4A32;
+    --espresso: #2B1710;
+    --blanco: #FBF7F0;
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+
+    background-color: var(--crema);
+    color: var(--espresso);
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+header {
+    width: 100%;
+
+    background-color: var(--crema);
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* LOGO */
+
+header img {
+    width: 140px;
+    height: auto;
+}
+
+
+/* NOMBRE */
+
+header h1 {
+    margin-top: 8px;
+
+    color: var(--espresso);
+
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* SUBTÍTULO */
+
+header p {
+    margin-top: 5px;
+
+    color: var(--verde);
+
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* =====================================
+   NAVEGACIÓN
+   ===================================== */
+
+nav {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--crema);
+
+    border-top: 1px solid var(--dorado);
+    border-bottom: 1px solid var(--dorado);
+
+    padding: 12px 5px;
+}
+
+
+/* CONOCENOS Y OPINA */
+
+nav a {
+    margin: 0 15px;
+
+    color: var(--verde);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+/* CUANDO PASAMOS EL MOUSE */
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+
+/* =====================================
+   CONTENIDO
+   ===================================== */
+
+main {
+    width: 100%;
+}
+
+main section {
+    width: 100%;
+
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background-color: var(--crema);
+}
+
+
+/* =====================================
+   TÍTULOS
+   ===================================== */
+
+main section h2 {
+    color: var(--espresso);
+
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+main section h3 {
+    color: var(--verde);
+
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   LÍNEA DECORATIVA
+   ===================================== */
+
+main section hr {
+    width: 60px;
+
+    border-width: 0;
+
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: var(--dorado);
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   TEXTO
+   ===================================== */
+
+main section p {
+    width: 90%;
+    max-width: 330px;
+
+    color: var(--espresso);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   BOTÓN
+   ===================================== */
+
+main section a {
+    display: inline-block;
+
+    background-color: var(--verde);
+
+    color: var(--blanco);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--verde);
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+
+main section a:hover {
+    background-color: var(--dorado);
+
+    border-color: var(--dorado);
+
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    width: 100%;
+
+    background-color: var(--espresso);
+
+    color: var(--blanco);
+
+    text-align: center;
+
+    padding: 25px 15px;
+}
+
+
+footer p {
+    color: var(--blanco);
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+
+    margin-bottom: 8px;
+}
+
+
+footer small {
+    color: var(--blanco);
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+
+/* =====================================
+   CELULARES MÁS CHICOS
+   ===================================== */
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header img {
+        width: 120px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 12px;
+    }
+
+    main section {
+        min-height: 400px;
+        padding: 30px 15px;
+    }
+
+    main section h2 {
+        font-size: 32px;
+    }
+
+    main section h3 {
+        font-size: 18px;
+    }
+}
