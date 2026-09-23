@@ -108,18 +108,28 @@ nav {
 }
 
 
+
 /* CONOCENOS Y OPINA */
 
 nav a {
-    margin: 0 15px;
+    display: inline-block;
 
-    color: var(--verde);
+    margin: 0 8px;
+
+    padding: 10px 18px;
+
+    background-color: var(--verde);
+
+    color: var(--blanco);
 
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
 
     text-decoration: none;
+
+    border: 2px solid var(--verde);
+    border-radius: 20px;
 
     transition: 0.3s;
 }
@@ -128,7 +138,11 @@ nav a {
 /* CUANDO PASAMOS EL MOUSE */
 
 nav a:hover {
-    color: var(--dorado);
+    background-color: var(--dorado);
+
+    border-color: var(--dorado);
+
+    transform: scale(1.05);
 }
 
 
