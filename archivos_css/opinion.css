@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #fdf6f0;
+  color: #3b2a26;
+}
+
+header {
+  background-color: #4b2e2e;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 a {
+  color: #e8d9c5;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+header h1 a:hover {
+  color: white;
+}
+
+header h2 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+}
+
+header p {
+  margin: 0;
+  font-size: 15px;
+  color: #d9c8b8;
+}
+
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+fieldset {
+  border: 1px solid #c9a58a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #4b2e2e;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #4b2e2e;
+}
+
+label {
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #c9a58a;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #4b2e2e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #6b4636;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #7a5e50;
+  font-size: 14px;
+}
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #c9a58a;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.link-volver {
+  color: #e8d9c5;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+.link-volver:hover {
+  color: white;
+}
+
+#lista-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comentario-card {
+  background-color: white;
+  border: 1px solid #c9a58a;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.estrellas {
+  color: #c9a558;
+  font-size: 18px;
+}
+
+.comentario-productos {
+  font-size: 14px;
+  color: #7a5e50;
+  margin: 4px 0;
+}
+
+.comentario-texto {
+  font-style: italic;
+  margin: 8px 0;
+}
+
+.comentario-fecha {
+  font-size: 12px;
+  color: #a8938a;
+}
