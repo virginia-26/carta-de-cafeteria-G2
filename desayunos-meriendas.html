@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Desayunos y Meriendas - Wöllen</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
@@ -14,43 +20,38 @@
 
         body {
             margin: 0;
-            font-family: Georgia, 'Times New Roman', serif;
-            background-color: #f8f2ea;
-            color: #3a2a22;
+            background-color: #f5ead8;
+            color: #3f2a1e;
+            font-family: 'Jost', Arial, sans-serif;
         }
 
 
-        /* NAVEGACIÓN */
+        /* BOTÓN VOLVER */
 
-        .navegacion {
-            background-color: #5f3c2a;
-            padding: 15px 20px;
+        .volver {
+            display: block;
+            width: fit-content;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 30px auto 35px;
 
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+            padding: 15px 34px;
 
-        .navegacion a {
-            color: #fff4e8;
             text-decoration: none;
 
-            font-size: 0.95rem;
-            font-weight: bold;
-            letter-spacing: 1px;
+            color: #2f1d14;
+            background-color: #f2dfc2;
 
-            padding: 9px 14px;
-            border-radius: 8px;
+            border: 1px solid #ba8248;
+            border-radius: 35px;
 
-            transition: 0.2s;
+            font-size: 1.15rem;
+            font-weight: 500;
+
+            box-shadow: 0 4px 8px rgba(90, 55, 30, 0.14);
         }
 
-        .navegacion a:hover {
-            background-color: #d98b4f;
-            color: white;
+        .volver:hover {
+            background-color: #ead1ad;
         }
 
 
@@ -58,70 +59,58 @@
 
         header {
             text-align: center;
-            padding: 55px 20px 40px;
-
-            background: linear-gradient(
-                135deg,
-                #7a4e32,
-                #9b6845,
-                #b77848
-            );
-
-            color: white;
-            border-bottom: 6px solid #e5ad68;
+            padding: 0 20px 20px;
         }
 
         header h1 {
-            font-size: 3.2rem;
-            letter-spacing: 4px;
             margin: 0;
+
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3rem;
+            letter-spacing: 1px;
+
+            color: #154838;
         }
 
         header h2 {
+            margin: 5px 0 0;
+
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.8rem;
-            font-weight: normal;
             font-style: italic;
+            font-weight: 600;
 
-            color: #ffe2bd;
-
-            margin: 5px 0 22px;
-        }
-
-        header p {
-            max-width: 680px;
-            margin: 7px auto;
-
-            font-size: 1rem;
-            line-height: 1.6;
-
-            color: #fff8f0;
+            color: #8a5d36;
         }
 
 
         /* CONTENIDO */
 
         main {
-            max-width: 1000px;
+            width: 90%;
+            max-width: 760px;
+
             margin: 0 auto;
-            padding: 30px 20px 60px;
+
+            padding-bottom: 50px;
         }
 
+
+        /* TÍTULOS DE SECCIONES */
+
         section {
-            margin-bottom: 60px;
+            margin-top: 45px;
         }
 
         section > h2 {
             text-align: center;
 
-            font-size: 1.9rem;
-            letter-spacing: 1px;
+            margin: 0 0 28px;
 
-            color: #70462f;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
 
-            margin: 45px 0 30px;
-            padding-bottom: 12px;
-
-            border-bottom: 3px solid #d98b4f;
+            color: #154838;
         }
 
 
@@ -129,169 +118,136 @@
 
         .item-row {
             display: flex;
-            align-items: stretch;
-
-            min-height: 190px;
-            margin-bottom: 18px;
-
-            background-color: #fffaf4;
-
-            border: 1px solid #dec5ae;
-            border-radius: 14px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 4px 10px rgba(93, 59, 39, 0.10);
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .item-row:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 7px 16px rgba(93, 59, 39, 0.16);
-        }
-
-
-        /* IMÁGENES */
-
-        .item-row .img-wrap {
-            flex: 0 0 38%;
-            width: 38%;
-            max-width: 360px;
-            min-height: 190px;
-
-            background-color: #f2e4d5;
-
-            display: flex;
             align-items: center;
-            justify-content: center;
 
-            padding: 8px;
+            min-height: 190px;
+
+            margin-bottom: 16px;
+            padding: 38px 45px;
+
+            background-color: #fffaf3;
+
+            border: 1px solid #e5caa6;
+            border-radius: 17px;
         }
 
-        .item-row .img-wrap img {
-            width: 100%;
-            height: 100%;
 
-            object-fit: contain;
+        /* IMAGEN */
+
+        .img-wrap {
+            flex-shrink: 0;
+        }
+
+        .img-wrap img {
+            width: 115px;
+            height: 115px;
+
+            object-fit: cover;
             object-position: center;
 
             display: block;
 
-            border-radius: 8px;
+            border-radius: 12px;
         }
 
 
         /* TEXTO */
 
-        .item-row .text {
-            flex: 1;
-
-            display: flex;
-            align-items: center;
-
-            padding: 25px 30px;
-
-            border-left: 6px solid #d98b4f;
+        .text {
+            padding-left: 50px;
         }
 
-        .item-row h3 {
+        .text h3 {
+            margin: 0 0 18px;
+
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.55rem;
-            margin: 0 0 10px;
+            font-weight: 600;
 
-            color: #6b422d;
+            color: #174b3c;
         }
 
-        .item-row p {
+        .text p {
             margin: 0;
 
-            font-size: 1rem;
-            line-height: 1.55;
+            font-size: 1.05rem;
+            line-height: 1.5;
 
-            color: #5a473d;
-        }
-
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-
-            padding: 28px 20px;
-
-            background-color: #6b422d;
-            color: #fff4e8;
-
-            border-top: 5px solid #d98b4f;
-
-            font-size: 1.15rem;
-            letter-spacing: 1px;
-        }
-
-        footer p {
-            margin: 0;
+            color: #5a2f1d;
         }
 
 
         /* CELULAR */
 
-        @media (max-width: 700px) {
+        @media (max-width: 650px) {
 
-            .navegacion {
-                gap: 8px;
-            }
+            .volver {
+                margin-top: 22px;
+                margin-bottom: 30px;
 
-            .navegacion a {
-                font-size: 0.8rem;
-                padding: 8px 10px;
-            }
+                padding: 12px 25px;
 
-            header {
-                padding: 40px 18px 30px;
+                font-size: 1rem;
             }
 
             header h1 {
-                font-size: 2.3rem;
+                font-size: 2.4rem;
             }
 
             header h2 {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
             }
 
             main {
-                padding: 20px 15px 40px;
+                width: 92%;
             }
 
             .item-row {
+                padding: 25px 22px;
+                min-height: 150px;
+            }
+
+            .img-wrap img {
+                width: 95px;
+                height: 95px;
+            }
+
+            .text {
+                padding-left: 25px;
+            }
+
+            .text h3 {
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+            }
+
+            .text p {
+                font-size: 0.95rem;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .item-row {
                 flex-direction: column;
+
+                text-align: center;
+
+                padding: 25px;
             }
 
-            .item-row .img-wrap {
-                width: 100%;
-                max-width: 100%;
-                height: 240px;
+            .img-wrap img {
+                width: 130px;
+                height: 130px;
+
+                margin-bottom: 20px;
             }
 
-            .item-row .text {
-                border-left: none;
-                border-top: 6px solid #d98b4f;
-
-                padding: 20px;
+            .text {
+                padding-left: 0;
             }
 
-            .item-row h3 {
-                font-size: 1.35rem;
-            }
-
-            footer {
-                font-size: 1rem;
-                padding: 22px 15px;
-            }
         }
 
     </style>
@@ -302,23 +258,11 @@
 <body>
 
 
-    <!-- NAVEGACIÓN -->
+    <!-- ÚNICO BOTÓN -->
 
-    <nav class="navegacion">
-
-        <a href="inicio.html">
-            INICIO
-        </a>
-
-        <a href="listaproductos.html">
-            ← VOLVER A LA CARTA
-        </a>
-
-        <a href="opinion.html">
-            OPINÁ
-        </a>
-
-    </nav>
+    <a href="inicio.html" class="volver">
+        ← Volver al inicio
+    </a>
 
 
     <!-- ENCABEZADO -->
@@ -328,15 +272,6 @@
         <h1>DESAYUNOS</h1>
 
         <h2>y Meriendas</h2>
-
-        <p>
-            Empezá el día con energía o disfrutá una merienda inolvidable.
-        </p>
-
-        <p>
-            Nuestras combinaciones incluyen café o infusión y están pensadas
-            para cada momento y cada gusto.
-        </p>
 
     </header>
 
@@ -364,16 +299,12 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Común</h3>
 
-                        <h3>Común</h3>
-
-                        <p>
-                            Café o infusión, dos medialunas,
-                            manteca y mermelada.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión, dos medialunas,
+                        manteca y mermelada.
+                    </p>
 
                 </div>
 
@@ -393,17 +324,12 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Especial</h3>
 
-                        <h3>Especial</h3>
-
-                        <p>
-                            Café o infusión, dos medialunas o criollos,
-                            jugo de naranja chico,
-                            manteca y mermelada.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión, dos medialunas o criollos,
+                        jugo de naranja chico, manteca y mermelada.
+                    </p>
 
                 </div>
 
@@ -423,16 +349,12 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Wollen</h3>
 
-                        <h3>Wollen</h3>
-
-                        <p>
-                            Café o infusión, medio tostado,
-                            jugo de naranja mediano.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión, medio tostado,
+                        jugo de naranja mediano.
+                    </p>
 
                 </div>
 
@@ -452,16 +374,12 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Dulce</h3>
 
-                        <h3>Dulce</h3>
-
-                        <p>
-                            Un café o infusión,
-                            porción de torta a elección.
-                        </p>
-
-                    </div>
+                    <p>
+                        Un café o infusión,
+                        porción de torta a elección.
+                    </p>
 
                 </div>
 
@@ -481,16 +399,12 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Dulce para compartir</h3>
 
-                        <h3>Dulce para compartir</h3>
-
-                        <p>
-                            Dos cafés o infusiones,
-                            dos porciones de torta para compartir.
-                        </p>
-
-                    </div>
+                    <p>
+                        Dos cafés o infusiones,
+                        dos porciones de torta para compartir.
+                    </p>
 
                 </div>
 
@@ -510,23 +424,19 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Fusionado</h3>
 
-                        <h3>Fusionado</h3>
-
-                        <p>
-                            Dos cafés o infusiones, medio tostado,
-                            dos porciones de torta
-                            y dos jugos de naranja.
-                        </p>
-
-                    </div>
+                    <p>
+                        Dos cafés o infusiones, medio tostado,
+                        dos porciones de torta y dos jugos de naranja.
+                    </p>
 
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- SALUDABLES + ENERGÉTICOS -->
@@ -549,17 +459,13 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Light</h3>
 
-                        <h3>Light</h3>
-
-                        <p>
-                            Dos cafés o infusiones, dos tostadas,
-                            queso y mermeladas,
-                            jugo chico y cazuela de frutas.
-                        </p>
-
-                    </div>
+                    <p>
+                        Dos cafés o infusiones, dos tostadas,
+                        queso y mermeladas, jugo chico
+                        y cazuela de frutas.
+                    </p>
 
                 </div>
 
@@ -579,17 +485,13 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Energético</h3>
 
-                        <h3>Energético</h3>
-
-                        <p>
-                            Café o infusión,
-                            yogurt con granola y frutas,
-                            jugo chico.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión,
+                        yogurt con granola y frutas,
+                        jugo chico.
+                    </p>
 
                 </div>
 
@@ -609,19 +511,13 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Especial</h3>
 
-                        <h3>Especial</h3>
-
-                        <p>
-                            Café o infusión,
-                            frutas con miel y nueces,
-                            tostadas integrales,
-                            queso crema y mermelada,
-                            jugo de naranja.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión, frutas con miel y nueces,
+                        tostadas integrales, queso crema y mermelada,
+                        jugo de naranja.
+                    </p>
 
                 </div>
 
@@ -641,19 +537,13 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Saludable Wollen</h3>
 
-                        <h3>Saludable Wollen</h3>
-
-                        <p>
-                            Café o infusión,
-                            tostón con palta,
-                            queso crema y semillas,
-                            cazuela de frutas,
-                            jugo de naranja.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión, tostón con palta,
+                        queso crema y semillas,
+                        cazuela de frutas y jugo de naranja.
+                    </p>
 
                 </div>
 
@@ -673,16 +563,11 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Saludable Wollen y huevo</h3>
 
-                        <h3>Saludable Wollen y huevo</h3>
-
-                        <p>
-                            Saludable Wollen,
-                            huevo revuelto.
-                        </p>
-
-                    </div>
+                    <p>
+                        Saludable Wollen, huevo revuelto.
+                    </p>
 
                 </div>
 
@@ -702,18 +587,13 @@
 
                 <div class="text">
 
-                    <div>
+                    <h3>Natural</h3>
 
-                        <h3>Natural</h3>
-
-                        <p>
-                            Café o infusión,
-                            bowl de yogurt natural
-                            con granola y frutas,
-                            dip de miel.
-                        </p>
-
-                    </div>
+                    <p>
+                        Café o infusión,
+                        bowl de yogurt natural con granola y frutas,
+                        dip de miel.
+                    </p>
 
                 </div>
 
@@ -723,15 +603,6 @@
 
 
     </main>
-
-
-    <footer>
-
-        <p>
-            Wöllen Heladería y Cafetería
-        </p>
-
-    </footer>
 
 
 </body>
