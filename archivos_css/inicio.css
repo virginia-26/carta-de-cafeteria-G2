@@ -44,6 +44,85 @@ body {
 
 
 /* =====================================
+   CARRUSEL DE NOVEDADES
+   Rectángulo finito, arriba de todo, ancho completo
+   ===================================== */
+
+.carrusel-novedades {
+    width: 100%;
+    height: 200px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.carrusel-track {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.carrusel-img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    animation: carrusel-fade 20s infinite;
+}
+
+.img1 { animation-delay: 0s; }
+.img2 { animation-delay: 4s; }
+.img3 { animation-delay: 8s; }
+.img4 { animation-delay: 12s; }
+.img5 { animation-delay: 16s; }
+
+@keyframes carrusel-fade {
+    0%   { opacity: 0; }
+    4%   { opacity: 1; }
+    16%  { opacity: 1; }
+    20%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.carrusel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: linear-gradient(
+        0deg,
+        rgba(43, 23, 16, 0.75) 0%,
+        rgba(43, 23, 16, 0) 100%
+    );
+
+    padding: 16px 20px 10px;
+
+    text-align: center;
+}
+
+.carrusel-overlay p {
+    color: var(--blanco);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
    HEADER
    ===================================== */
 
@@ -653,6 +732,20 @@ footer p {
 
     .video-wollen {
         border-radius: 9px;
+    }
+
+    /* CARRUSEL - bien finito en celular */
+    .carrusel-novedades {
+        height: 120px;
+    }
+
+    .carrusel-overlay p {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    .carrusel-overlay {
+        padding: 10px 14px 6px;
     }
 }
 
