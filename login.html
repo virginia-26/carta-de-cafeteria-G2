@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wöllen - Mi cuenta</title>
+
+    <link rel="stylesheet" href="./archivos_css/login.css">
+</head>
+
+<body>
+
+    <main class="login-section">
+
+        <div class="login-container">
+
+            <div class="login-header">
+                <h1>Wöllen</h1>
+                <h2 id="tituloFormulario">Iniciar sesión</h2>
+                <p id="subtituloFormulario">
+                    Ingresá a tu cuenta para continuar
+                </p>
+            </div>
+
+
+            <!-- INICIAR SESIÓN -->
+
+            <form id="loginForm" class="login-form">
+
+                <div class="form-group">
+                    <label for="loginEmail">Correo electrónico</label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="loginEmail"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="loginPassword"
+                        placeholder="Ingresá tu contraseña"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+
+                <div class="password-option">
+
+                    <input
+                        type="checkbox"
+                        id="mostrarLogin"
+                    >
+
+                    <label for="mostrarLogin">
+                        Mostrar contraseña
+                    </label>
+
+                </div>
+
+
+                <button type="submit" class="login-button">
+                    Iniciar sesión
+                </button>
+
+
+                <p id="loginMessage" class="form-message"></p>
+
+            </form>
+
+
+            <!-- REGISTRO -->
+
+            <form id="registroForm" class="login-form hidden">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="registroEmail">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registroEmail"
+                        name="registroEmail"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="registroPassword">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registroPassword"
+                        name="registroPassword"
+                        placeholder="Mínimo 6 caracteres"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Repetir contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Repetí tu contraseña"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+
+                <div class="password-option">
+
+                    <input
+                        type="checkbox"
+                        id="mostrarRegistro"
+                    >
+
+                    <label for="mostrarRegistro">
+                        Mostrar contraseña
+                    </label>
+
+                </div>
+
+
+                <button type="submit" class="login-button">
+                    Crear cuenta
+                </button>
+
+
+                <p id="registroMessage" class="form-message"></p>
+
+            </form>
+
+
+            <!-- CAMBIAR ENTRE LOGIN Y REGISTRO -->
+
+            <div class="cambiar-formulario">
+
+                <p id="textoCambio">
+                    ¿No tenés una cuenta?
+                    <button type="button" id="btnRegistro">
+                        Registrate
+                    </button>
+                </p>
+
+            </div>
+
+
+            <div class="volver">
+                <a href="inicio.html">
+                    ← Volver a Wöllen
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
