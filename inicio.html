@@ -1,67 +1,148 @@
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wöllen Heladería y Cafetería</title>
+
     <link rel="stylesheet" href="./archivos_css/inicio.css">
 </head>
 
 <body>
 
+    <!-- =====================================
+         ENCABEZADO
+         ===================================== -->
+
     <header>
-        <center>
 
-            <img src="./imagenes_de_vir/LOGO.jpeg" alt="Logo de Wöllen Heladería y Cafetería" width="250px">
+        <div class="header-contenido">
 
-            <h1>WÖLLEN</h1>
+            <img
+                src="./imagenes_de_vir/LOGO.jpeg"
+                alt="Logo de Wöllen Heladería y Cafetería"
+                class="logo"
+            >
 
-            <p>Swiss Ice Cream & Specialty Coffee</p>
+            <div class="header-texto">
 
-            <nav>
-                <a href="https://www.instagram.com/wollenheladeriasanfrancisco/?hl=es-la" target="_blank">CONOCENOS</a>
-                <a href="opinion.html">OPINÁ</a>
+                <h1>WÖLLEN</h1>
+
+                <p>Swiss Ice Cream & Specialty Coffee</p>
+
+            </div>
+
+            <nav class="nav-principal">
+
+                <a
+                    href="https://www.instagram.com/wollenheladeriasanfrancisco/?hl=es-la"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    CONOCENOS
+                </a>
+
+                <a href="opinion.html">
+                    OPINÁ
+                </a>
+
             </nav>
 
-        </center>
+        </div>
+
     </header>
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+         ===================================== -->
 
     <main>
 
-        <section>
+        <!-- PRESENTACIÓN -->
 
-            <h2>WÖLLEN</h2>
+        <section class="presentacion">
 
-            <h3>Swiss Ice Cream & Specialty Coffee</h3>
+            <div class="contenido-presentacion">
 
-            <hr>
+                <h2>WÖLLEN</h2>
 
-            <p>UN MOMENTO PARA DISFRUTAR</p>
+                <h3>Swiss Ice Cream & Specialty Coffee</h3>
 
-            <p>
-                Desde el corazón de los bosques alpinos, Wöllen
-                trae a tu mesa una experiencia que combina la
-                tradición suiza con los sabores auténticos de cada
-                propuesta.
-            </p>
+                <hr>
 
-            <nav>
-                <ul>
-                    <li><a href="listaproductos.html">VER LA CARTA</a></li>
-                </ul>
-            </nav>
+                <p class="frase-principal">
+                    UN MOMENTO PARA DISFRUTAR
+                </p>
+
+                <p class="descripcion">
+                    Desde el corazón de los bosques alpinos, Wöllen
+                    trae a tu mesa una experiencia que combina la
+                    tradición suiza con los sabores auténticos de cada
+                    propuesta.
+                </p>
+
+                <div class="acciones">
+
+                    <a href="listaproductos.html" class="boton-carta">
+                        VER LA CARTA
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             VIDEO
+             ===================================== -->
+
+        <section class="seccion-video">
+
+            <div class="contenido-video">
+
+                <p class="video-etiqueta">CONOCÉ WÖLLEN</p>
+
+                <h2 class="video-titulo">Viví la experiencia</h2>
+
+                <hr>
+
+                <div class="video-marco">
+
+                    <iframe
+                        class="video-wollen"
+                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fheladeriaswollenoficial%2Fvideos%2Fwollen-experience%2F116662963667083%2F&show_text=false&width=560"
+                        title="Wöllen Experience"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        loading="lazy"
+                        scrolling="no"
+                        frameborder="0"
+                    ></iframe>
+
+                </div>
+
+            </div>
 
         </section>
 
     </main>
 
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
     <footer>
+
         <p>Wöllen Heladería y Cafetería</p>
+
     </footer>
 
 </body>
+
 </html>

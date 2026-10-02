@@ -13,119 +13,315 @@
 
 body {
   margin: 0;
-  padding: 24px 14px 50px;
+  padding: 34px 60px 70px;
   background-color: var(--crema);
   font-family: 'Jost', sans-serif;
+  color: var(--espresso);
 }
 
-/* Botón de volver a la carta */
+
+/* =========================================
+   BOTÓN VOLVER
+   ========================================= */
+
 .titulo-categoria {
-  text-align: center;
-  margin: 0 0 20px;
+  width: 100%;
+  text-align: left;
+  margin: 0 0 26px;
 }
 
 .volver-categoria {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+
   font-family: 'Jost', sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
+
   color: var(--espresso);
   text-decoration: none;
+
   background-color: var(--beige);
+
   border: 1px solid var(--dorado);
   border-radius: 30px;
-  padding: 10px 22px;
+
+  padding: 11px 24px;
+
   box-shadow: 0 2px 4px rgba(43, 23, 16, 0.1);
+
+  transition: 0.3s ease;
 }
 
-.volver-categoria:active {
+.volver-categoria:hover {
   background-color: var(--dorado);
   color: var(--blanco);
+  transform: translateY(-2px);
 }
 
-/* Nombre grande de la categoría */
+
+/* =========================================
+   NOMBRE DE LA CATEGORÍA
+   ========================================= */
+
 .nombre-categoria {
-  text-align: center;
+  width: 100%;
+
+  text-align: left;
+
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+
   color: var(--verde);
-  margin: 0 0 24px;
+
+  margin: 0 0 34px;
 }
 
-/* La tabla entera se convierte en una lista de tarjetas apiladas */
+
+/* =========================================
+   TABLA DE PRODUCTOS
+   ========================================= */
+
 .carta-productos {
+  width: 100%;
+
   border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  display: block;
+  border-spacing: 0 16px;
+
+  margin: 0;
+
+  display: table;
 }
 
-.carta-productos tbody,
-.carta-productos tr,
-.carta-productos td {
-  display: block;
+.carta-productos tbody {
+  display: table-row-group;
   width: 100%;
 }
 
-/* Cada fila de producto se convierte en tarjeta horizontal */
 .carta-productos tr {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background-color: var(--blanco);
-  border: 1px solid var(--beige);
-  border-radius: 12px;
-  padding: 10px 14px;
-  margin-bottom: 10px;
+  display: table-row;
+  width: 100%;
 }
 
-/* Celda de la imagen */
-.carta-productos td:first-child {
-  width: auto;
-  flex-shrink: 0;
+.carta-productos td {
+  display: table-cell;
+
+  background-color: var(--blanco);
+
+  border-top: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+
+  padding: 22px 30px;
+
+  vertical-align: middle;
 }
+
+
+/* =========================================
+   PRIMERA CELDA - IMAGEN
+   ========================================= */
+
+.carta-productos td:first-child {
+  width: 190px;
+
+  border-left: 1px solid var(--beige);
+
+  border-radius: 14px 0 0 14px;
+}
+
+
+/* =========================================
+   ÚLTIMA CELDA - TEXTO
+   ========================================= */
+
+.carta-productos td:last-child {
+  width: auto;
+
+  border-right: 1px solid var(--beige);
+
+  border-radius: 0 14px 14px 0;
+
+  font-family: 'Jost', sans-serif;
+
+  font-weight: 300;
+
+  font-size: 1rem;
+
+  color: var(--espresso);
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
 
 .carta-productos td img {
-  width: 60px;
-  height: 60px;
+  width: 145px;
+  height: 145px;
+
   object-fit: cover;
-  border-radius: 8px;
+
+  border-radius: 10px;
+
   display: block;
 }
 
-/* Celda del texto */
-.carta-productos td:last-child {
-  flex: 1;
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-  font-size: 0.82rem;
-  color: var(--espresso);
-  line-height: 1.4;
-}
+
+/* =========================================
+   NOMBRE DEL PRODUCTO
+   ========================================= */
 
 .carta-productos strong {
   display: block;
+
   font-family: 'Playfair Display', serif;
+
   font-weight: 600;
-  font-size: 1rem;
+
+  font-size: 1.3rem;
+
   color: var(--verde);
-  margin-bottom: 2px;
+
+  margin-bottom: 10px;
 }
 
-/* En pantallas más grandes, un poco más de aire */
-@media (min-width: 600px) {
-  .carta-productos tr {
-    padding: 14px 20px;
+
+/* =========================================
+   EFECTO AL PASAR EL MOUSE
+   ========================================= */
+
+.carta-productos tr {
+  transition: 0.3s ease;
+}
+
+.carta-productos tr:hover td {
+  background-color: #FFFDF9;
+}
+
+
+/* =========================================
+   PANTALLAS MEDIANAS
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  body {
+    padding: 28px 35px 55px;
+  }
+
+  .nombre-categoria {
+    font-size: 2.1rem;
+  }
+
+  .carta-productos td:first-child {
+    width: 155px;
   }
 
   .carta-productos td img {
-    width: 76px;
-    height: 76px;
+    width: 115px;
+    height: 115px;
+  }
+
+  .carta-productos td {
+    padding: 18px 22px;
+  }
+
+  .carta-productos td:last-child {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 20px 16px 40px;
+  }
+
+  .titulo-categoria {
+    text-align: left;
+  }
+
+  .nombre-categoria {
+    font-size: 1.8rem;
+    margin-bottom: 22px;
+  }
+
+  .carta-productos {
+    display: block;
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  .carta-productos tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .carta-productos tr {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--beige);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 12px;
+  }
+
+  .carta-productos td {
+    display: block;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+  }
+
+  .carta-productos td:first-child {
+    width: auto;
+
+    border-radius: 0;
+
+    flex-shrink: 0;
+  }
+
+  .carta-productos td:last-child {
+    width: auto;
+
+    border-radius: 0;
+
+    flex: 1;
+
+    font-size: 0.85rem;
+  }
+
+  .carta-productos td img {
+    width: 78px;
+    height: 78px;
+  }
+
+  .carta-productos strong {
+    font-size: 1rem;
+    margin-bottom: 4px;
   }
 }

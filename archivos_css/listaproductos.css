@@ -13,160 +13,461 @@
 
 body {
   margin: 0;
-  padding: 30px 16px;
+  padding: 35px 55px 60px;
+
   background-color: var(--crema);
+
   font-family: 'Jost', sans-serif;
-  text-align: center;
+
+  color: var(--espresso);
+
+  text-align: left;
 }
 
-/* Volver al inicio */
+
+/* =========================================
+   VOLVER AL INICIO
+   ========================================= */
+
 .volver-inicio {
   display: inline-flex;
+
   align-items: center;
+
   gap: 8px;
-  margin-bottom: 22px;
+
+  margin-bottom: 28px;
+
   font-family: 'Jost', sans-serif;
+
   font-weight: 500;
-  font-size: 0.85rem;
+
+  font-size: 0.9rem;
+
   letter-spacing: 1px;
+
   text-transform: uppercase;
+
   color: var(--dorado);
+
   text-decoration: none;
+
+  transition: 0.3s ease;
 }
 
-.volver-inicio:active {
+
+.volver-inicio:hover {
   color: var(--verde);
+
+  transform: translateX(-2px);
 }
 
-/* Título principal */
+
+/* =========================================
+   TÍTULO PRINCIPAL
+   ========================================= */
+
 .titulo-principal {
   font-family: 'Playfair Display', serif;
+
   font-weight: 700;
-  font-size: 2.4rem;
+
+  font-size: 3rem;
+
   color: var(--espresso);
-  margin: 0 0 6px;
+
+  margin: 0 0 8px;
+
   line-height: 1.15;
+
   letter-spacing: 0.5px;
+
+  text-align: left;
 }
+
+
+/* PALABRA DESTACADA */
 
 .palabra-destacada {
   color: var(--dorado);
+
   font-style: italic;
+
   font-weight: 600;
 }
 
-/* Subtítulo */
+
+/* =========================================
+   SUBTÍTULO
+   ========================================= */
+
 .subtitulo-principal {
   font-family: 'Cormorant Garamond', serif;
+
   font-style: italic;
+
   font-weight: 500;
-  font-size: 1.35rem;
+
+  font-size: 1.55rem;
+
   color: var(--espresso);
-  margin: 0 0 24px;
+
+  margin: 0 0 22px;
+
+  text-align: left;
 }
 
-/* Línea divisoria, más fina y decorativa */
+
+/* =========================================
+   LÍNEA DIVISORIA
+   ========================================= */
+
 .linea-divisoria {
   border: none;
+
   height: 2px;
-  width: 70px;
+
+  width: 90px;
+
   background-color: var(--dorado);
-  margin: 0 auto 36px;
+
+  margin: 0 0 38px;
 }
 
-/* --- GRILLA MOBILE: la tabla se apila en 1 columna --- */
-.grilla-categorias table,
-.grilla-categorias tbody,
-.grilla-categorias tr,
-.grilla-categorias td {
-  display: block;
+
+/* =========================================
+   GRILLA DE CATEGORÍAS
+   ========================================= */
+
+.grilla-categorias {
   width: 100%;
 }
+
 
 .grilla-categorias table {
-  border-spacing: 0;
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 18px;
+
+  margin: 0;
 }
+
+
+.grilla-categorias tbody {
+  width: 100%;
+}
+
+
+.grilla-categorias tr {
+  width: 100%;
+}
+
 
 .grilla-categorias td {
-  margin-bottom: 16px;
+  width: 25%;
+
+  vertical-align: top;
 }
 
-/* Cada botón/tarjeta de categoría */
+
+/* =========================================
+   BOTÓN / TARJETA DE CATEGORÍA
+   ========================================= */
+
 .boton-categoria {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   width: 100%;
+
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
   background-color: var(--blanco);
+
   border: 1px solid var(--beige);
+
   border-radius: 14px;
-  padding: 14px 18px;
+
+  padding: 22px 18px;
+
   text-decoration: none;
-  text-align: left;
-  min-height: 64px;
+
+  text-align: center;
+
   box-shadow: 0 2px 6px rgba(43, 23, 16, 0.08);
+
+  transition: 0.3s ease;
 }
 
-.boton-categoria:active {
+
+.boton-categoria:hover {
   border-color: var(--dorado);
-  background-color: var(--beige);
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 6px 14px rgba(43, 23, 16, 0.12);
 }
+
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
 
 .boton-categoria img {
-  width: 60px;
-  height: 60px;
+  width: 145px;
+
+  height: 145px;
+
   object-fit: cover;
-  border-radius: 10px;
+
+  border-radius: 12px;
+
   flex-shrink: 0;
+
+  margin-bottom: 5px;
 }
 
-/* Texto de cada categoría */
+
+/* =========================================
+   TEXTO DE CATEGORÍA
+   ========================================= */
+
 .texto-categoria {
   display: block;
+
   font-family: 'Playfair Display', serif;
+
   font-weight: 600;
-  font-size: 1.1rem;
+
+  font-size: 1.25rem;
+
   color: var(--verde);
+
   line-height: 1.25;
+
   letter-spacing: 0.3px;
 }
 
-/* Hint "Tocá aquí" */
+
+/* =========================================
+   HINT "TOCÁ AQUÍ"
+   ========================================= */
+
 .hint {
   display: block;
+
   font-family: 'Jost', sans-serif;
+
   font-weight: 300;
-  font-size: 0.75rem;
-  letter-spacing: 0.5px;
+
+  font-size: 0.76rem;
+
+  letter-spacing: 0.7px;
+
   text-transform: uppercase;
+
   color: var(--dorado);
+
   margin-top: 3px;
 }
 
-@media (min-width: 600px) {
+
+/* =========================================
+   PANTALLAS MEDIANAS
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  body {
+    padding: 30px 30px 50px;
+  }
+
+
+  .titulo-principal {
+    font-size: 2.6rem;
+  }
+
+
+  .subtitulo-principal {
+    font-size: 1.4rem;
+  }
+
+
+  .grilla-categorias table {
+    border-spacing: 14px;
+  }
+
+
+  .grilla-categorias td {
+    width: 33.33%;
+  }
+
+
+  .boton-categoria {
+    min-height: 220px;
+
+    padding: 18px 14px;
+  }
+
+
+  .boton-categoria img {
+    width: 120px;
+
+    height: 120px;
+  }
+
+
+  .texto-categoria {
+    font-size: 1.15rem;
+  }
+}
+
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 25px 16px 40px;
+
+    text-align: center;
+  }
+
+
+  .volver-inicio {
+    margin-bottom: 22px;
+  }
+
+
+  .titulo-principal {
+    font-size: 2.3rem;
+
+    text-align: center;
+  }
+
+
+  .subtitulo-principal {
+    font-size: 1.3rem;
+
+    text-align: center;
+  }
+
+
+  .linea-divisoria {
+    width: 70px;
+
+    margin: 0 auto 30px;
+  }
+
+
   .grilla-categorias table,
   .grilla-categorias tbody,
   .grilla-categorias tr,
   .grilla-categorias td {
-    display: revert;
-    width: auto;
+    display: block;
+
+    width: 100%;
   }
+
 
   .grilla-categorias table {
-    border-spacing: 20px;
-    margin: 0 auto;
+    border-spacing: 0;
+
+    margin: 0;
   }
+
+
+  .grilla-categorias td {
+    margin-bottom: 14px;
+  }
+
 
   .boton-categoria {
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    width: 220px;
+    width: 100%;
+
+    min-height: auto;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    padding: 14px 18px;
+
+    text-align: left;
   }
 
+
   .boton-categoria img {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 10px;
+    width: 70px;
+
+    height: 70px;
+
+    margin-bottom: 0;
+  }
+
+
+  .texto-categoria {
+    font-size: 1.05rem;
+  }
+
+
+  .hint {
+    font-size: 0.72rem;
+  }
+}
+
+
+/* =========================================
+   CELULARES MUY CHICOS
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  body {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+
+  .titulo-principal {
+    font-size: 2rem;
+  }
+
+
+  .subtitulo-principal {
+    font-size: 1.2rem;
+  }
+
+
+  .boton-categoria {
+    padding: 12px;
+
+    gap: 12px;
+  }
+
+
+  .boton-categoria img {
+    width: 62px;
+
+    height: 62px;
+  }
+
+
+  .texto-categoria {
+    font-size: 1rem;
   }
 }

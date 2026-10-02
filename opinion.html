@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,80 +9,91 @@
     <title>Wöllen - Tu Opinión</title>
 
     <link rel="stylesheet" href="archivos_css/opinion.css">
-
 </head>
 
 <body>
 
+    <!-- =====================================
+         ENCABEZADO
+         ===================================== -->
+
     <header>
 
-        <center>
+        <h1>
+            <a href="inicio.html">
+                ← WÖLLEN
+            </a>
+        </h1>
 
-            <h1>
-                <a href="inicio.html">
-                    ← WÖLLEN
-                </a>
-            </h1>
+        <h2>
+            Contanos tu opinión
+        </h2>
 
-            <h2>Contanos tu opinión</h2>
+        <p>
+            Tu experiencia nos ayuda a mejorar cada día.
+        </p>
 
-            <p>
-                Tu experiencia nos ayuda a mejorar cada día.
-            </p>
-
-            <p>
-                <a href="comentarios.html" class="link-volver">
-                    Ver opiniones de otros clientes
-                </a>
-            </p>
-
-        </center>
+        <p>
+            <a href="comentarios.html" class="link-volver">
+                Ver opiniones de otros clientes
+            </a>
+        </p>
 
     </header>
 
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+         ===================================== -->
 
     <main>
 
         <form id="form-opinion">
 
 
-            <!-- NOMBRE -->
+            <!-- =====================================
+                 DATOS PERSONALES
+                 ===================================== -->
 
-            <label for="nombre">
-                Nombre:
-            </label>
+            <div class="grupo-datos">
 
-            <br>
+                <div class="campo-formulario">
 
-            <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Tu nombre"
-            >
+                    <label for="nombre">
+                        Nombre:
+                    </label>
 
-            <br><br>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                    >
 
-
-            <!-- APELLIDO -->
-
-            <label for="apellido">
-                Apellido:
-            </label>
-
-            <br>
-
-            <input
-                type="text"
-                id="apellido"
-                name="apellido"
-                placeholder="Tu apellido"
-            >
-
-            <br><br>
+                </div>
 
 
-            <!-- PRODUCTOS -->
+                <div class="campo-formulario">
+
+                    <label for="apellido">
+                        Apellido:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        placeholder="Tu apellido"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 PRODUCTOS
+                 ===================================== -->
 
             <fieldset>
 
@@ -90,96 +102,81 @@
                 </legend>
 
 
-                <input
-                    type="checkbox"
-                    id="prod-desayunos"
-                    name="producto"
-                    value="Desayunos y Meriendas"
-                >
+                <div class="opciones-productos">
 
-                <label for="prod-desayunos">
-                    Desayunos y Meriendas
-                </label>
-
-                <br>
-
-
-                <input
-                    type="checkbox"
-                    id="prod-tortas"
-                    name="producto"
-                    value="Tortas y Tostados"
-                >
-
-                <label for="prod-tortas">
-                    Tortas y Tostados
-                </label>
-
-                <br>
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="prod-desayunos"
+                            name="producto"
+                            value="Desayunos y Meriendas"
+                        >
+                        Desayunos y Meriendas
+                    </label>
 
 
-                <input
-                    type="checkbox"
-                    id="prod-dulces"
-                    name="producto"
-                    value="Dulces, Clásicos y Tentaciones"
-                >
-
-                <label for="prod-dulces">
-                    Dulces, Clásicos y Tentaciones
-                </label>
-
-                <br>
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="prod-tortas"
+                            name="producto"
+                            value="Tortas y Tostados"
+                        >
+                        Tortas y Tostados
+                    </label>
 
 
-                <input
-                    type="checkbox"
-                    id="prod-cafeteria"
-                    name="producto"
-                    value="Cafetería"
-                >
-
-                <label for="prod-cafeteria">
-                    Cafetería
-                </label>
-
-                <br>
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="prod-dulces"
+                            name="producto"
+                            value="Dulces, Clásicos y Tentaciones"
+                        >
+                        Dulces, Clásicos y Tentaciones
+                    </label>
 
 
-                <input
-                    type="checkbox"
-                    id="prod-bebidas"
-                    name="producto"
-                    value="Bebidas"
-                >
-
-                <label for="prod-bebidas">
-                    Bebidas
-                </label>
-
-                <br>
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="prod-cafeteria"
+                            name="producto"
+                            value="Cafetería"
+                        >
+                        Cafetería
+                    </label>
 
 
-                <input
-                    type="checkbox"
-                    id="prod-copas"
-                    name="producto"
-                    value="Copas Heladas"
-                >
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="prod-bebidas"
+                            name="producto"
+                            value="Bebidas"
+                        >
+                        Bebidas
+                    </label>
 
-                <label for="prod-copas">
-                    Copas Heladas
-                </label>
 
-                <br>
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="prod-copas"
+                            name="producto"
+                            value="Copas Heladas"
+                        >
+                        Copas Heladas
+                    </label>
+
+                </div>
 
             </fieldset>
 
 
-            <br>
-
-
-            <!-- CALIFICACIÓN -->
+            <!-- =====================================
+                 CALIFICACIÓN
+                 ===================================== -->
 
             <fieldset>
 
@@ -188,95 +185,110 @@
                 </legend>
 
 
-                <input
-                    type="radio"
-                    id="cal-1"
-                    name="calificacion"
-                    value="1"
-                >
+                <div class="opciones-calificacion">
 
-                <label for="cal-1">1</label>
-
-
-                <input
-                    type="radio"
-                    id="cal-2"
-                    name="calificacion"
-                    value="2"
-                >
-
-                <label for="cal-2">2</label>
+                    <label>
+                        <input
+                            type="radio"
+                            id="cal-1"
+                            name="calificacion"
+                            value="1"
+                        >
+                        1
+                    </label>
 
 
-                <input
-                    type="radio"
-                    id="cal-3"
-                    name="calificacion"
-                    value="3"
-                >
-
-                <label for="cal-3">3</label>
-
-
-                <input
-                    type="radio"
-                    id="cal-4"
-                    name="calificacion"
-                    value="4"
-                >
-
-                <label for="cal-4">4</label>
+                    <label>
+                        <input
+                            type="radio"
+                            id="cal-2"
+                            name="calificacion"
+                            value="2"
+                        >
+                        2
+                    </label>
 
 
-                <input
-                    type="radio"
-                    id="cal-5"
-                    name="calificacion"
-                    value="5"
-                >
+                    <label>
+                        <input
+                            type="radio"
+                            id="cal-3"
+                            name="calificacion"
+                            value="3"
+                        >
+                        3
+                    </label>
 
-                <label for="cal-5">5</label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            id="cal-4"
+                            name="calificacion"
+                            value="4"
+                        >
+                        4
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            id="cal-5"
+                            name="calificacion"
+                            value="5"
+                        >
+                        5
+                    </label>
+
+                </div>
 
             </fieldset>
 
 
-            <br>
+            <!-- =====================================
+                 COMENTARIO
+                 ===================================== -->
+
+            <div class="campo-formulario campo-comentario">
+
+                <label for="comentario">
+                    Tu comentario:
+                </label>
+
+                <textarea
+                    id="comentario"
+                    name="comentario"
+                    rows="5"
+                    placeholder="Contanos qué te pareció..."
+                ></textarea>
+
+            </div>
 
 
-            <!-- COMENTARIO -->
+            <!-- =====================================
+                 BOTÓN
+                 ===================================== -->
 
-            <label for="comentario">
-                Tu comentario:
-            </label>
+            <div class="contenedor-boton">
 
-            <br>
+                <button
+                    type="button"
+                    id="btn-enviar"
+                >
+                    Enviar opinión
+                </button>
 
-            <textarea
-                id="comentario"
-                name="comentario"
-                rows="5"
-                cols="50"
-                placeholder="Contanos qué te pareció..."
-            ></textarea>
-
-
-            <br><br>
-
-
-            <!-- BOTÓN -->
-
-            <button
-                type="button"
-                id="btn-enviar"
-            >
-                Enviar opinión
-            </button>
-
+            </div>
 
         </form>
 
     </main>
 
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
 
     <footer>
 
@@ -286,6 +298,10 @@
 
     </footer>
 
+
+    <!-- =====================================
+         JAVASCRIPT
+         ===================================== -->
 
     <script src="opinion.js"></script>
 

@@ -1,72 +1,243 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wöllen - Categorías</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="archivos_css/listaproductos.css">
 </head>
+
 <body>
 
-<p><a href="inicio.html" class="volver-inicio">← Volver al inicio</a></p>
-<h1 class="titulo-principal">¿Qué te tienta <span class="palabra-destacada">hoy</span>?</h1>
-<p class="subtitulo-principal">Elegí una categoría y descubrí la carta completa</p>
-<hr class="linea-divisoria">
+    <!-- =====================================
+         VOLVER AL INICIO
+         ===================================== -->
 
-<main class="grilla-categorias">
-<table cellpadding="15" cellspacing="0" width="100%" align="center">
+    <p class="contenedor-volver">
 
-  <tr align="center" valign="top">
-    <td>
-     <a href="desayunos-meriendas.html" class="boton-categoria">
-        <img src="./imageneslistaproductos/desayunosymeriendas.png" alt="Desayunos y Meriendas" width="120"><br>
-        <span class="texto-categoria">Desayunos y Meriendas</span><br>
-        <span class="hint">Tocá aquí</span>
-      </a>
-    </td>
-    <td>
-      <a href="tortasytostados.html" class="boton-categoria">
-        <img src="./imageneslistaproductos/tortas.png" alt="Tortas y Tostados" width="120"><br>
-        <span class="texto-categoria">Tortas y Tostados</span><br>
-        <span class="hint">Tocá aquí</span>
-      </a>
-    </td>
-  </tr>
+        <a href="inicio.html" class="volver-inicio">
+            ← Volver al inicio
+        </a>
 
-  <tr align="center" valign="top">
-    <td>
-      <a href="dulces.html" class="boton-categoria">
-        <img src="./imageneslistaproductos/dulces,clasicos.png" alt="Dulces, Clásicos y Tentaciones" width="120"><br>
-        <span class="texto-categoria">Dulces, Clásicos y Tentaciones</span><br>
-        <span class="hint">Tocá aquí</span>
-      </a>
-    </td>
-    <td>
-      <a href="cafeteria.html" class="boton-categoria">
-        <img src="./imageneslistaproductos/cafe.png" alt="Cafetería" width="120"><br>
-        <span class="texto-categoria">Cafetería</span><br>
-        <span class="hint">Tocá aquí</span>
-      </a>
-    </td>
-  </tr>
+    </p>
 
-  <tr align="center" valign="top">
-    <td>
-      <a href="bebidas.html" class="boton-categoria">
-        <img src="./imageneslistaproductos/bebidas.png" alt="Bebidas" width="120"><br>
-        <span class="texto-categoria">Bebidas</span><br>
-        <span class="hint">Tocá aquí</span>
-      </a>
-    </td>
-    <td>
-      <a href="copasheladas.html" class="boton-categoria">
-        <img src="./imageneslistaproductos/copahelada.png" alt="Copas Heladas" width="120"><br>
-        <span class="texto-categoria">Copas Heladas</span><br>
-        <span class="hint">Tocá aquí</span>
-      </a>
-    </td>
-  </tr>
 
-</table>
-</main>
+    <!-- =====================================
+         TÍTULO PRINCIPAL
+         ===================================== -->
+
+    <h1 class="titulo-principal">
+
+        ¿Qué te tienta
+
+        <span class="palabra-destacada">
+            hoy
+        </span>?
+
+    </h1>
+
+
+    <p class="subtitulo-principal">
+        Elegí una categoría y descubrí la carta completa
+    </p>
+
+
+    <hr class="linea-divisoria">
+
+
+    <!-- =====================================
+         CATEGORÍAS
+         ===================================== -->
+
+    <main class="grilla-categorias">
+
+        <table>
+
+            <tbody>
+
+                <!-- FILA 1 -->
+
+                <tr>
+
+                    <td>
+
+                        <a
+                            href="desayunos-meriendas.html"
+                            class="boton-categoria"
+                        >
+
+                            <img
+                                src="./imageneslistaproductos/desayunosymeriendas.png"
+                                alt="Desayunos y Meriendas"
+                            >
+
+                            <span class="texto-categoria">
+                                Desayunos y Meriendas
+                            </span>
+
+                            <span class="hint">
+                                Ver categoría
+                            </span>
+
+                        </a>
+
+                    </td>
+
+
+                    <td>
+
+                        <a
+                            href="tortasytostados.html"
+                            class="boton-categoria"
+                        >
+
+                            <img
+                                src="./imageneslistaproductos/tortas.png"
+                                alt="Tortas y Tostados"
+                            >
+
+                            <span class="texto-categoria">
+                                Tortas y Tostados
+                            </span>
+
+                            <span class="hint">
+                                Ver categoría
+                            </span>
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- FILA 2 -->
+
+                <tr>
+
+                    <td>
+
+                        <a
+                            href="dulces.html"
+                            class="boton-categoria"
+                        >
+
+                            <img
+                                src="./imageneslistaproductos/dulces,clasicos.png"
+                                alt="Dulces, Clásicos y Tentaciones"
+                            >
+
+                            <span class="texto-categoria">
+                                Dulces, Clásicos y Tentaciones
+                            </span>
+
+                            <span class="hint">
+                                Ver categoría
+                            </span>
+
+                        </a>
+
+                    </td>
+
+
+                    <td>
+
+                        <a
+                            href="cafeteria.html"
+                            class="boton-categoria"
+                        >
+
+                            <img
+                                src="./imageneslistaproductos/cafe.png"
+                                alt="Cafetería"
+                            >
+
+                            <span class="texto-categoria">
+                                Cafetería
+                            </span>
+
+                            <span class="hint">
+                                Ver categoría
+                            </span>
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- FILA 3 -->
+
+                <tr>
+
+                    <td>
+
+                        <a
+                            href="bebidas.html"
+                            class="boton-categoria"
+                        >
+
+                            <img
+                                src="./imageneslistaproductos/bebidas.png"
+                                alt="Bebidas"
+                            >
+
+                            <span class="texto-categoria">
+                                Bebidas
+                            </span>
+
+                            <span class="hint">
+                                Ver categoría
+                            </span>
+
+                        </a>
+
+                    </td>
+
+
+                    <td>
+
+                        <a
+                            href="copasheladas.html"
+                            class="boton-categoria"
+                        >
+
+                            <img
+                                src="./imageneslistaproductos/copahelada.png"
+                                alt="Copas Heladas"
+                            >
+
+                            <span class="texto-categoria">
+                                Copas Heladas
+                            </span>
+
+                            <span class="hint">
+                                Ver categoría
+                            </span>
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 /* =========================================
    WÖLLEN - CAFETERÍA
+   DISEÑO MÁS ANCHO PARA COMPUTADORA
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&display=swap');
@@ -33,6 +34,7 @@ html {
 }
 
 body {
+    width: 100%;
     background-color: var(--crema);
     color: var(--marron);
     font-family: 'Cormorant Garamond', serif;
@@ -46,8 +48,9 @@ body {
    ========================================= */
 
 header {
-    text-align: center;
-    padding: 0 20px 5px;
+    width: 100%;
+    text-align: left;
+    padding: 28px 55px 5px;
     background-color: var(--crema);
 }
 
@@ -70,15 +73,22 @@ header p {
 
 .volver {
     display: inline-block;
+
     color: var(--marron);
     background-color: #EBD6B9;
+
     border: 1px solid #C9A878;
     border-radius: 30px;
-    padding: 12px 32px;
+
+    padding: 12px 30px;
+
     font-family: 'Playfair Display', serif;
     font-size: 17px;
+
     text-decoration: none;
+
     box-shadow: 0 3px 7px rgba(58, 36, 24, 0.15);
+
     transition: 0.3s ease;
 }
 
@@ -94,19 +104,22 @@ header p {
    ========================================= */
 
 main {
-    width: 685px;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 35px 0 60px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 35px 55px 70px;
 }
 
 main h2 {
     font-family: 'Playfair Display', serif;
     color: var(--verde);
-    text-align: center;
-    font-size: 38px;
+
+    text-align: left;
+
+    font-size: 42px;
     font-weight: 500;
-    margin-bottom: 36px;
+
+    margin-bottom: 35px;
 }
 
 
@@ -115,10 +128,14 @@ main h2 {
    ========================================= */
 
 section {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 40px;
+
+    gap: 16px;
+
+    margin-bottom: 45px;
 }
 
 
@@ -128,45 +145,76 @@ section {
 
 article {
     width: 100%;
-    height: 184px;
+    min-height: 175px;
+
     background-color: var(--blanco);
+
     border: none;
-    border-radius: 16px;
-    padding: 18px 42px;
+    border-radius: 14px;
+
+    padding: 22px 35px;
+
     display: flex;
     align-items: center;
-    gap: 47px;
-    box-shadow: none;
+
+    gap: 35px;
+
     transition: 0.3s ease;
 }
 
 article:hover {
     transform: translateY(-2px);
-    box-shadow: none;
+
+    box-shadow: 0 4px 10px rgba(58, 36, 24, 0.08);
 }
 
+
+/* =========================================
+   IMAGEN DEL PRODUCTO
+   ========================================= */
+
 article img {
-    width: 110px;
-    height: 110px;
+    width: 135px;
+    height: 135px;
+
     object-fit: cover;
+
     border-radius: 10px;
+
     flex-shrink: 0;
 }
 
+
+/* =========================================
+   TÍTULO DEL PRODUCTO
+   ========================================= */
+
 article h3 {
     font-family: 'Playfair Display', serif;
+
     color: var(--verde);
-    font-size: 22px;
+
+    font-size: 25px;
     font-weight: 500;
-    margin-bottom: 27px;
+
+    margin-bottom: 12px;
 }
+
+
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
 
 article p {
     color: var(--marron);
-    font-size: 17px;
-    line-height: 1.35;
+
+    font-size: 18px;
+
+    line-height: 1.45;
+
     margin: 0;
-    max-width: 440px;
+
+    max-width: none;
 }
 
 
@@ -176,8 +224,11 @@ article p {
 
 .precio {
     color: var(--dorado);
+
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+
+    font-size: 19px;
+
     font-weight: 600;
 }
 
@@ -187,26 +238,46 @@ article p {
    ========================================= */
 
 figure {
+    width: 100%;
+
+    min-height: 175px;
+
     background-color: var(--blanco);
+
     border: none;
-    border-radius: 16px;
-    padding: 18px;
-    text-align: center;
-    box-shadow: none;
+    border-radius: 14px;
+
+    padding: 22px 35px;
+
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
 }
 
 figure img {
-    width: 110px;
-    height: 110px;
+    width: 135px;
+    height: 135px;
+
     object-fit: cover;
+
     border-radius: 10px;
+
+    flex-shrink: 0;
 }
 
 figure h3 {
     font-family: 'Playfair Display', serif;
+
     color: var(--verde);
-    font-size: 22px;
-    margin-top: 10px;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-top: 0;
 }
 
 
@@ -215,14 +286,71 @@ figure h3 {
    ========================================= */
 
 footer {
+    width: 100%;
+
     background-color: var(--marron);
+
     color: var(--crema);
+
     text-align: center;
+
     padding: 25px 15px;
 }
 
 footer p {
     margin: 5px;
+}
+
+
+/* =========================================
+   PANTALLAS MEDIANAS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 24px 30px 5px;
+    }
+
+    main {
+        padding: 30px 30px 55px;
+    }
+
+    main h2 {
+        font-size: 36px;
+    }
+
+    article {
+        padding: 20px 25px;
+        gap: 25px;
+    }
+
+    article img {
+        width: 115px;
+        height: 115px;
+    }
+
+    article h3 {
+        font-size: 23px;
+    }
+
+    article p {
+        font-size: 17px;
+    }
+
+    figure {
+        padding: 20px 25px;
+        gap: 25px;
+    }
+
+    figure img {
+        width: 115px;
+        height: 115px;
+    }
+
+    figure h3 {
+        font-size: 23px;
+    }
 }
 
 
@@ -236,19 +364,22 @@ footer p {
         font-size: 16px;
     }
 
+    header {
+        padding: 18px 18px 5px;
+    }
+
     .volver {
         font-size: 15px;
         padding: 10px 24px;
     }
 
     main {
-        width: 92%;
-        max-width: 92%;
-        padding: 25px 0 40px;
+        width: 100%;
+        padding: 25px 18px 40px;
     }
 
     main h2 {
-        font-size: 27px;
+        font-size: 28px;
         margin-bottom: 25px;
     }
 
@@ -257,20 +388,19 @@ footer p {
     }
 
     article {
-        height: auto;
-        min-height: 150px;
+        min-height: 140px;
         padding: 15px;
         gap: 18px;
     }
 
     article img {
-        width: 95px;
-        height: 95px;
+        width: 90px;
+        height: 90px;
     }
 
     article h3 {
         font-size: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     article p {
@@ -283,14 +413,14 @@ footer p {
     }
 
     figure {
-        background-color: var(--blanco);
-        border: none;
-        box-shadow: none;
+        min-height: 140px;
+        padding: 15px;
+        gap: 18px;
     }
 
     figure img {
-        width: 95px;
-        height: 95px;
+        width: 90px;
+        height: 90px;
     }
 
     figure h3 {
@@ -305,14 +435,19 @@ footer p {
 
 @media (max-width: 400px) {
 
+    header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
     .volver {
         font-size: 14px;
         padding: 9px 20px;
     }
 
     main {
-        width: 94%;
-        max-width: 94%;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     main h2 {
@@ -336,5 +471,19 @@ footer p {
 
     article p {
         font-size: 14px;
+    }
+
+    figure {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    figure img {
+        width: 80px;
+        height: 80px;
+    }
+
+    figure h3 {
+        font-size: 18px;
     }
 }

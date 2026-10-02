@@ -1,5 +1,6 @@
 /* =========================================
    WÖLLEN - CAFETERÍA
+   DISEÑO ESTIRADO PARA COMPUTADORA
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&display=swap');
@@ -15,6 +16,7 @@
     --marron: #3A2418;
     --verde: #2C4A32;
     --dorado: #A9824A;
+    --beige: #EBD6B9;
 }
 
 
@@ -33,6 +35,8 @@ html {
 }
 
 body {
+    width: 100%;
+
     background-color: var(--crema);
 
     color: var(--marron);
@@ -50,11 +54,13 @@ body {
    ========================================= */
 
 header {
-    text-align: center;
-
-    padding: 0 20px 5px;
+    width: 100%;
 
     background-color: var(--crema);
+
+    text-align: left;
+
+    padding: 28px 55px 5px;
 }
 
 
@@ -77,7 +83,7 @@ header h1 {
 
 
 /* =========================================
-   SUBTÍTULO
+   SUBTÍTULO DEL HEADER
    ========================================= */
 
 header p {
@@ -94,27 +100,29 @@ header p {
 
     color: var(--marron);
 
-    background-color: #EBD6B9;
+    background-color: var(--beige);
 
     border: 1px solid #C9A878;
 
     border-radius: 30px;
 
-    padding: 12px 32px;
+    padding: 12px 30px;
 
     font-family: 'Playfair Display', serif;
 
     font-size: 17px;
 
+    font-weight: 500;
+
     text-decoration: none;
 
     box-shadow: 0 3px 7px rgba(58, 36, 24, 0.15);
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 
-/* CUANDO PASAMOS EL MOUSE */
+/* EFECTO DEL BOTÓN */
 
 .volver:hover {
     background-color: var(--dorado);
@@ -126,17 +134,17 @@ header p {
 
 
 /* =========================================
-   CONTENIDO
+   CONTENIDO PRINCIPAL
    ========================================= */
 
 main {
-    width: 685px;
+    width: 100%;
 
-    max-width: 90%;
+    max-width: none;
 
-    margin: 0 auto;
+    margin: 0;
 
-    padding: 35px 0 60px;
+    padding: 35px 55px 70px;
 }
 
 
@@ -149,28 +157,30 @@ main h2 {
 
     color: var(--verde);
 
-    text-align: center;
+    text-align: left;
 
-    font-size: 38px;
+    font-size: 42px;
 
     font-weight: 500;
 
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 }
 
 
 /* =========================================
-   PRODUCTOS
+   SECCIÓN DE PRODUCTOS
    ========================================= */
 
 section {
+    width: 100%;
+
     display: flex;
 
     flex-direction: column;
 
-    gap: 14px;
+    gap: 16px;
 
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 
@@ -181,36 +191,32 @@ section {
 article {
     width: 100%;
 
-    height: 184px;
+    min-height: 175px;
 
     background-color: var(--blanco);
 
     border: none;
 
-    border-radius: 16px;
+    border-radius: 14px;
 
-    padding: 18px 42px;
+    padding: 22px 35px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 47px;
+    gap: 35px;
 
-    box-shadow: none;
-
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 
-/* =========================================
-   EFECTO AL PASAR EL MOUSE
-   ========================================= */
+/* EFECTO AL PASAR EL MOUSE */
 
 article:hover {
     transform: translateY(-2px);
 
-    box-shadow: none;
+    box-shadow: 0 5px 12px rgba(58, 36, 24, 0.08);
 }
 
 
@@ -219,15 +225,17 @@ article:hover {
    ========================================= */
 
 article img {
-    width: 110px;
+    width: 135px;
 
-    height: 110px;
+    height: 135px;
 
     object-fit: cover;
 
     border-radius: 10px;
 
     flex-shrink: 0;
+
+    display: block;
 }
 
 
@@ -240,26 +248,28 @@ article h3 {
 
     color: var(--verde);
 
-    font-size: 22px;
+    font-size: 25px;
 
     font-weight: 500;
 
-    margin-bottom: 27px;
+    margin-bottom: 12px;
 }
 
 
-/* DESCRIPCIÓN */
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
 
 article p {
     color: var(--marron);
 
-    font-size: 17px;
+    font-size: 18px;
 
-    line-height: 1.35;
+    line-height: 1.45;
 
     margin: 0;
 
-    max-width: 440px;
+    max-width: none;
 }
 
 
@@ -272,7 +282,7 @@ article p {
 
     font-family: 'Playfair Display', serif;
 
-    font-size: 18px;
+    font-size: 19px;
 
     font-weight: 600;
 }
@@ -283,39 +293,57 @@ article p {
    ========================================= */
 
 figure {
+    width: 100%;
+
+    min-height: 175px;
+
     background-color: var(--blanco);
 
     border: none;
 
-    border-radius: 16px;
+    border-radius: 14px;
 
-    padding: 18px;
+    padding: 22px 35px;
 
-    text-align: center;
+    display: flex;
 
-    box-shadow: none;
+    align-items: center;
+
+    gap: 35px;
+
+    text-align: left;
 }
 
 
-figure img {
-    width: 110px;
+/* IMAGEN DEL FIGURE */
 
-    height: 110px;
+figure img {
+    width: 135px;
+
+    height: 135px;
 
     object-fit: cover;
 
     border-radius: 10px;
+
+    flex-shrink: 0;
+
+    display: block;
 }
 
+
+/* TÍTULO DEL FIGURE */
 
 figure h3 {
     font-family: 'Playfair Display', serif;
 
     color: var(--verde);
 
-    font-size: 22px;
+    font-size: 25px;
 
-    margin-top: 10px;
+    font-weight: 500;
+
+    margin: 0;
 }
 
 
@@ -324,6 +352,8 @@ figure h3 {
    ========================================= */
 
 footer {
+    width: 100%;
+
     background-color: var(--marron);
 
     color: var(--crema);
@@ -340,6 +370,72 @@ footer p {
 
 
 /* =========================================
+   PANTALLAS MEDIANAS
+   TABLETS / NOTEBOOKS CHICAS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 25px 30px 5px;
+    }
+
+
+    main {
+        padding: 30px 30px 55px;
+    }
+
+
+    main h2 {
+        font-size: 36px;
+    }
+
+
+    article {
+        padding: 20px 25px;
+
+        gap: 25px;
+    }
+
+
+    article img {
+        width: 115px;
+
+        height: 115px;
+    }
+
+
+    article h3 {
+        font-size: 23px;
+    }
+
+
+    article p {
+        font-size: 17px;
+    }
+
+
+    figure {
+        padding: 20px 25px;
+
+        gap: 25px;
+    }
+
+
+    figure img {
+        width: 115px;
+
+        height: 115px;
+    }
+
+
+    figure h3 {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================
    CELULARES
    ========================================= */
 
@@ -350,9 +446,10 @@ footer p {
     }
 
 
-    /* =====================================
-       BOTÓN VOLVER
-       ===================================== */
+    header {
+        padding: 18px 18px 5px;
+    }
+
 
     .volver {
         font-size: 15px;
@@ -361,47 +458,27 @@ footer p {
     }
 
 
-    /* =====================================
-       CONTENIDO
-       ===================================== */
-
     main {
-        width: 92%;
+        width: 100%;
 
-        max-width: 92%;
-
-        padding: 25px 0 40px;
+        padding: 25px 18px 40px;
     }
 
 
-    /* =====================================
-       TÍTULO
-       ===================================== */
-
     main h2 {
-        font-size: 27px;
+        font-size: 28px;
 
         margin-bottom: 25px;
     }
 
-
-    /* =====================================
-       PRODUCTOS
-       ===================================== */
 
     section {
         gap: 14px;
     }
 
 
-    /* =====================================
-       TARJETAS
-       ===================================== */
-
     article {
-        height: auto;
-
-        min-height: 150px;
+        min-height: 140px;
 
         padding: 15px;
 
@@ -409,31 +486,19 @@ footer p {
     }
 
 
-    /* =====================================
-       IMAGEN
-       ===================================== */
-
     article img {
-        width: 95px;
+        width: 90px;
 
-        height: 95px;
+        height: 90px;
     }
 
-
-    /* =====================================
-       NOMBRE
-       ===================================== */
 
     article h3 {
         font-size: 20px;
 
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
-
-    /* =====================================
-       DESCRIPCIÓN
-       ===================================== */
 
     article p {
         font-size: 15px;
@@ -442,32 +507,24 @@ footer p {
     }
 
 
-    /* =====================================
-       PRECIO
-       ===================================== */
-
     .precio {
         font-size: 17px;
     }
 
 
-    /* =====================================
-       FIGURE
-       ===================================== */
-
     figure {
-        background-color: var(--blanco);
+        min-height: 140px;
 
-        border: none;
+        padding: 15px;
 
-        box-shadow: none;
+        gap: 18px;
     }
 
 
     figure img {
-        width: 95px;
+        width: 90px;
 
-        height: 95px;
+        height: 90px;
     }
 
 
@@ -483,7 +540,12 @@ footer p {
 
 @media (max-width: 400px) {
 
-    /* BOTÓN */
+    header {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
 
     .volver {
         font-size: 14px;
@@ -492,23 +554,17 @@ footer p {
     }
 
 
-    /* CONTENIDO */
-
     main {
-        width: 94%;
+        padding-left: 12px;
 
-        max-width: 94%;
+        padding-right: 12px;
     }
 
-
-    /* TÍTULO */
 
     main h2 {
         font-size: 24px;
     }
 
-
-    /* TARJETAS */
 
     article {
         padding: 12px;
@@ -517,16 +573,12 @@ footer p {
     }
 
 
-    /* IMAGEN */
-
     article img {
         width: 80px;
 
         height: 80px;
     }
 
-
-    /* NOMBRE */
 
     article h3 {
         font-size: 18px;
@@ -535,9 +587,26 @@ footer p {
     }
 
 
-    /* DESCRIPCIÓN */
-
     article p {
         font-size: 14px;
+    }
+
+
+    figure {
+        padding: 12px;
+
+        gap: 12px;
+    }
+
+
+    figure img {
+        width: 80px;
+
+        height: 80px;
+    }
+
+
+    figure h3 {
+        font-size: 18px;
     }
 }

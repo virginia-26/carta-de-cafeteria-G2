@@ -1,10 +1,12 @@
 /* =====================================
    WÖLLEN - INICIO
-   DISEÑO PARA CELULAR
+   DISEÑO ESCRITORIO + RESPONSIVE
    ===================================== */
 
 
-/* PALETA DE COLORES */
+/* =====================================
+   PALETA DE COLORES
+   ===================================== */
 
 :root {
     --crema: #F3E9DA;
@@ -16,7 +18,9 @@
 }
 
 
-/* CONFIGURACIÓN GENERAL */
+/* =====================================
+   CONFIGURACIÓN GENERAL
+   ===================================== */
 
 * {
     box-sizing: border-box;
@@ -24,10 +28,13 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
-    max-width: 430px;
-    margin: auto;
+    min-height: 100vh;
 
     background-color: var(--crema);
     color: var(--espresso);
@@ -45,43 +52,70 @@ header {
 
     background-color: var(--crema);
 
+    border-bottom: 1px solid var(--beige);
+}
+
+
+/* CONTENIDO INTERNO DEL HEADER */
+
+.header-contenido {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 50px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
     text-align: center;
-
-    padding: 20px;
 }
 
 
-/* LOGO */
+/* =====================================
+   LOGO
+   ===================================== */
 
-header img {
-    width: 140px;
-    height: auto;
+.logo {
+    width: 135px;
+    height: 135px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    margin-bottom: 12px;
 }
 
 
-/* NOMBRE */
+/* =====================================
+   TEXTO DEL HEADER
+   ===================================== */
 
-header h1 {
-    margin-top: 8px;
-
+.header-texto h1 {
     color: var(--espresso);
 
     font-family: Georgia, serif;
-    font-size: 30px;
+
+    font-size: 36px;
     font-weight: bold;
 
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+
+    margin-bottom: 5px;
 }
 
 
-/* SUBTÍTULO */
-
-header p {
-    margin-top: 5px;
-
+.header-texto p {
     color: var(--verde);
 
     font-family: Georgia, serif;
+
     font-size: 18px;
     font-style: italic;
 }
@@ -91,114 +125,137 @@ header p {
    NAVEGACIÓN
    ===================================== */
 
-nav {
-    width: 100%;
+.nav-principal {
+    width: auto;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    background-color: var(--crema);
+    gap: 12px;
+
+    margin-top: 22px;
+
+    padding: 12px 18px;
 
     border-top: 1px solid var(--dorado);
     border-bottom: 1px solid var(--dorado);
-
-    padding: 12px 5px;
 }
 
 
+/* BOTONES DEL NAV */
 
-/* CONOCENOS Y OPINA */
-
-nav a {
+.nav-principal a {
     display: inline-block;
 
-    margin: 0 8px;
-
-    padding: 10px 18px;
+    padding: 10px 24px;
 
     background-color: var(--verde);
 
     color: var(--blanco);
 
     font-family: Arial, sans-serif;
-    font-size: 14px;
+
+    font-size: 13px;
     font-weight: bold;
+
+    letter-spacing: 0.5px;
 
     text-decoration: none;
 
     border: 2px solid var(--verde);
-    border-radius: 20px;
+    border-radius: 25px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 
-/* CUANDO PASAMOS EL MOUSE */
-
-nav a:hover {
+.nav-principal a:hover {
     background-color: var(--dorado);
 
     border-color: var(--dorado);
 
-    transform: scale(1.05);
+    transform: translateY(-2px);
 }
 
 
 /* =====================================
-   CONTENIDO
+   CONTENIDO PRINCIPAL
    ===================================== */
 
 main {
     width: 100%;
 }
 
-main section {
+
+/* =====================================
+   PRESENTACIÓN
+   ===================================== */
+
+.presentacion {
     width: 100%;
 
-    min-height: 450px;
-
     display: flex;
-
-    flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
-    text-align: center;
-
-    padding: 40px 20px;
+    padding: 60px 50px 40px;
 
     background-color: var(--crema);
+
+    text-align: center;
+}
+
+
+/* BLOQUE CENTRAL */
+
+.contenido-presentacion {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 }
 
 
 /* =====================================
-   TÍTULOS
+   TÍTULO PRINCIPAL
    ===================================== */
 
-main section h2 {
+.presentacion h2 {
     color: var(--espresso);
 
     font-family: Georgia, serif;
-    font-size: 36px;
+
+    font-size: 54px;
     font-weight: bold;
 
-    letter-spacing: 3px;
+    letter-spacing: 6px;
 
     margin-bottom: 10px;
 }
 
 
-main section h3 {
+/* =====================================
+   SUBTÍTULO
+   ===================================== */
+
+.presentacion h3 {
     color: var(--verde);
 
     font-family: Georgia, serif;
-    font-size: 20px;
-    font-style: italic;
 
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: normal;
+
+    margin-bottom: 20px;
 }
 
 
@@ -206,44 +263,68 @@ main section h3 {
    LÍNEA DECORATIVA
    ===================================== */
 
-main section hr {
-    width: 60px;
+.presentacion hr {
+    width: 85px;
 
-    border-width: 0;
+    border: none;
 
-    border-top-width: 2px;
-    border-top-style: solid;
-    border-top-color: var(--dorado);
+    border-top: 2px solid var(--dorado);
 
-    margin-top: 5px;
+    margin: 0 auto 24px;
+}
+
+
+/* =====================================
+   FRASE PRINCIPAL
+   ===================================== */
+
+.frase-principal {
+    color: var(--dorado);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
     margin-bottom: 20px;
 }
 
 
 /* =====================================
-   TEXTO
+   DESCRIPCIÓN
    ===================================== */
 
-main section p {
-    width: 90%;
-    max-width: 330px;
+.descripcion {
+    width: 100%;
+    max-width: 690px;
 
     color: var(--espresso);
 
     font-family: Arial, sans-serif;
-    font-size: 14px;
 
-    line-height: 1.6;
+    font-size: 16px;
 
-    margin-bottom: 25px;
+    line-height: 1.8;
+
+    margin-bottom: 30px;
 }
 
 
 /* =====================================
-   BOTÓN
+   BOTÓN VER LA CARTA
    ===================================== */
 
-main section a {
+.acciones {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.boton-carta {
     display: inline-block;
 
     background-color: var(--verde);
@@ -251,29 +332,137 @@ main section a {
     color: var(--blanco);
 
     font-family: Arial, sans-serif;
+
     font-size: 14px;
     font-weight: bold;
 
+    letter-spacing: 0.5px;
+
     text-decoration: none;
 
-    padding: 13px 28px;
+    padding: 14px 32px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--verde);
+    border: 1px solid var(--verde);
+    border-radius: 5px;
 
-    border-radius: 3px;
-
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 
-main section a:hover {
+.boton-carta:hover {
     background-color: var(--dorado);
 
     border-color: var(--dorado);
 
-    transform: scale(1.05);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   VIDEO
+   ===================================== */
+
+.seccion-video {
+    width: 100%;
+
+    padding: 40px 50px 80px;
+
+    background: linear-gradient(
+        180deg,
+        var(--crema) 0%,
+        var(--beige) 100%
+    );
+}
+
+
+.contenido-video {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.video-etiqueta {
+    color: var(--dorado);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.video-titulo {
+    color: var(--espresso);
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    margin-bottom: 14px;
+}
+
+
+.seccion-video hr {
+    width: 85px;
+
+    border: none;
+
+    border-top: 2px solid var(--dorado);
+
+    margin: 0 auto 32px;
+}
+
+
+/* MARCO DEL VIDEO */
+
+.video-marco {
+    width: 100%;
+
+    padding: 10px;
+
+    background: linear-gradient(
+        135deg,
+        var(--dorado) 0%,
+        var(--verde) 100%
+    );
+
+    border-radius: 18px;
+
+    box-shadow: 0 14px 35px rgba(43, 23, 16, 0.28);
+
+    overflow: hidden;
+}
+
+
+/* IFRAME DEL VIDEO */
+
+.video-wollen {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    border: none;
+
+    background-color: var(--espresso);
+
+    border-radius: 10px;
 }
 
 
@@ -290,7 +479,7 @@ footer {
 
     text-align: center;
 
-    padding: 25px 15px;
+    padding: 27px 20px;
 }
 
 
@@ -298,58 +487,228 @@ footer p {
     color: var(--blanco);
 
     font-family: Georgia, serif;
-    font-size: 17px;
+
+    font-size: 16px;
     font-style: italic;
 
-    margin-bottom: 8px;
-}
-
-
-footer small {
-    color: var(--blanco);
-
-    font-family: Arial, sans-serif;
-    font-size: 11px;
+    margin: 0;
 }
 
 
 /* =====================================
-   CELULARES MÁS CHICOS
+   PANTALLAS MEDIANAS
+   ===================================== */
+
+@media (max-width: 900px) {
+
+    .header-contenido {
+        padding: 26px 30px 22px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-texto h1 {
+        font-size: 33px;
+    }
+
+    .presentacion {
+        padding: 50px 30px 35px;
+    }
+
+    .presentacion h2 {
+        font-size: 46px;
+    }
+
+    .presentacion h3 {
+        font-size: 22px;
+    }
+
+    .descripcion {
+        max-width: 620px;
+    }
+
+    /* VIDEO */
+
+    .seccion-video {
+        padding: 35px 30px 65px;
+    }
+
+    .video-titulo {
+        font-size: 33px;
+    }
+}
+
+
+/* =====================================
+   CELULARES
+   ===================================== */
+
+@media (max-width: 600px) {
+
+    .header-contenido {
+        padding: 22px 18px;
+    }
+
+    .logo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .header-texto h1 {
+        font-size: 29px;
+
+        letter-spacing: 4px;
+    }
+
+    .header-texto p {
+        font-size: 16px;
+    }
+
+    .nav-principal {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 12px 5px;
+    }
+
+    .nav-principal a {
+        padding: 9px 17px;
+
+        font-size: 12px;
+    }
+
+    .presentacion {
+        padding: 40px 20px 30px;
+    }
+
+    .presentacion h2 {
+        font-size: 36px;
+
+        letter-spacing: 4px;
+    }
+
+    .presentacion h3 {
+        font-size: 18px;
+
+        line-height: 1.4;
+    }
+
+    .presentacion hr {
+        width: 60px;
+    }
+
+    .frase-principal {
+        font-size: 14px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .descripcion {
+        max-width: 360px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .boton-carta {
+        padding: 12px 26px;
+
+        font-size: 13px;
+    }
+
+    /* VIDEO */
+
+    .seccion-video {
+        padding: 30px 18px 50px;
+    }
+
+    .video-etiqueta {
+        font-size: 14px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .video-titulo {
+        font-size: 28px;
+    }
+
+    .seccion-video hr {
+        width: 60px;
+
+        margin-bottom: 24px;
+    }
+
+    .video-marco {
+        padding: 6px;
+
+        border-radius: 14px;
+    }
+
+    .video-wollen {
+        border-radius: 9px;
+    }
+}
+
+
+/* =====================================
+   CELULARES MUY CHICOS
    ===================================== */
 
 @media (max-width: 360px) {
 
-    header {
-        padding: 15px;
+    .header-contenido {
+        padding: 18px 12px;
     }
 
-    header img {
-        width: 120px;
+    .logo {
+        width: 100px;
+        height: 100px;
     }
 
-    header h1 {
+    .header-texto h1 {
         font-size: 26px;
     }
 
-    header p {
-        font-size: 16px;
+    .header-texto p {
+        font-size: 14px;
     }
 
-    nav a {
-        margin: 0 10px;
-        font-size: 12px;
+    .nav-principal a {
+        padding: 8px 13px;
+
+        font-size: 11px;
     }
 
-    main section {
-        min-height: 400px;
-        padding: 30px 15px;
+    .presentacion {
+        padding: 35px 15px 25px;
     }
 
-    main section h2 {
-        font-size: 32px;
+    .presentacion h2 {
+        font-size: 31px;
     }
 
-    main section h3 {
-        font-size: 18px;
+    .presentacion h3 {
+        font-size: 17px;
+    }
+
+    .descripcion {
+        font-size: 13px;
+    }
+
+    /* VIDEO */
+
+    .seccion-video {
+        padding: 25px 12px 40px;
+    }
+
+    .video-titulo {
+        font-size: 24px;
     }
 }

@@ -13,15 +13,16 @@
 
 body {
   margin: 0;
-  padding: 24px 14px 50px;
+  padding: 30px 50px 60px;
   background-color: var(--crema);
   font-family: 'Jost', sans-serif;
 }
 
 /* Botón de volver a la carta */
 .titulo-categoria {
-  text-align: center;
-  margin: 0 0 20px;
+  width: 100%;
+  margin: 0 0 25px;
+  text-align: left;
 }
 
 .volver-categoria {
@@ -41,113 +42,114 @@ body {
   box-shadow: 0 2px 4px rgba(43, 23, 16, 0.1);
 }
 
-.volver-categoria:active {
+.volver-categoria:hover {
   background-color: var(--dorado);
   color: var(--blanco);
 }
 
 /* Nombre grande de la categoría */
 .nombre-categoria {
-  text-align: center;
+  width: 100%;
+  text-align: left;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   color: var(--verde);
-  margin: 0 0 24px;
+  margin: 0 0 30px;
 }
 
-/* La tabla entera se convierte en una lista de tarjetas apiladas */
+/* Tabla general */
 .carta-productos {
+  width: 100%;
   border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  display: block;
+  border-spacing: 0 12px;
+  margin: 0;
 }
 
-.carta-productos tbody,
-.carta-productos tr,
-.carta-productos td,
-.carta-productos th {
-  display: block;
-  width: 100%;
-}
-
-/* Encabezados de sección (FRUTALES, REFRESCANTES, etc) */
+/* Encabezados de sección */
 .carta-productos th {
   background-color: var(--verde);
   color: var(--blanco);
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 1.5px;
-  text-align: center;
-  padding: 10px 12px;
-  margin: 28px 0 12px;
+  text-align: left;
+  padding: 13px 20px;
   border-radius: 8px;
 }
 
-.carta-productos tr:first-child th {
-  margin-top: 0;
-}
-
-/* Cada fila de producto se convierte en tarjeta horizontal */
+/* Filas de productos */
 .carta-productos tr:has(td) {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   background-color: var(--blanco);
-  border: 1px solid var(--beige);
-  border-radius: 12px;
-  padding: 10px 14px;
-  margin-bottom: 10px;
 }
 
-/* Celda de la imagen */
+/* Celdas */
+.carta-productos td {
+  padding: 14px 20px;
+  background-color: var(--blanco);
+  border-top: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+  vertical-align: middle;
+}
+
+/* Primera celda */
 .carta-productos td:first-child {
-  width: auto;
-  flex-shrink: 0;
+  width: 140px;
+  border-left: 1px solid var(--beige);
+  border-radius: 12px 0 0 12px;
 }
 
+/* Última celda */
+.carta-productos td:last-child {
+  border-right: 1px solid var(--beige);
+  border-radius: 0 12px 12px 0;
+}
+
+/* Imágenes */
 .carta-productos td img {
-  width: 60px;
-  height: 60px;
+  width: 105px;
+  height: 105px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
 }
 
-/* Celda del texto */
-.carta-productos td:last-child {
-  flex: 1;
-}
-
+/* Nombre del producto */
 .carta-productos strong {
   display: block;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--verde);
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
+/* Descripción */
 .carta-productos td:last-child {
   font-family: 'Jost', sans-serif;
   font-weight: 300;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--espresso);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* En pantallas más grandes, un poco más de aire */
-@media (min-width: 600px) {
-  .carta-productos tr:has(td) {
-    padding: 14px 20px;
+/* Adaptación solamente para pantallas chicas */
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+  }
+
+  .nombre-categoria {
+    font-size: 1.8rem;
+  }
+
+  .carta-productos td:first-child {
+    width: 100px;
   }
 
   .carta-productos td img {
-    width: 76px;
-    height: 76px;
+    width: 75px;
+    height: 75px;
   }
 }

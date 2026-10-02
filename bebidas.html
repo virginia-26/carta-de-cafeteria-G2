@@ -1,130 +1,331 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bebidas - Wöllen</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="archivos_css/bebidas.css">
 </head>
+
+
 <body>
 
-<div class="titulo-categoria">
-  <a href="listaproductos.html" class="volver-categoria">← Volver a la carta</a>
-</div>
-<h1 class="nombre-categoria">BEBIDAS</h1>
+    <!-- =====================================
+         BOTÓN VOLVER
+         ===================================== -->
 
-<table class="carta-productos" cellpadding="10" width="100%">
+    <div class="titulo-categoria">
 
-  <tr>
-    <th colspan="2">FRUTALES</th>
-  </tr>
+        <a href="listaproductos.html" class="volver-categoria">
+            ← Volver a la carta
+        </a>
 
-  <tr>
-    <td width="80"><img src="./imagenes_bebidas/licuadodefruta.png" alt="Licuado de frutas" width="70"></td>
-    <td>
-      <strong>LICUADO DE FRUTAS</strong><br>
-      Durazno · Banana · Frutilla · Ananá · Multifruta
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/smuti.png" alt="Smoothies" width="70"></td>
-    <td>
-      <strong>SMOOTHIES</strong><br>
-      Consultar variedad
-    </td>
-  </tr>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/jugodenaranja.png" alt="Jugo de naranja" width="70"></td>
-    <td>
-      <strong>JUGO DE NARANJA</strong><br>
-      Chico · Mediano · Grande
-    </td>
-  </tr>
+    <!-- =====================================
+         TÍTULO
+         ===================================== -->
 
-  <tr>
-    <td><img src="./imagenes_bebidas/pomelada.png" alt="Pomelada" width="70"></td>
-    <td>
-      <strong>POMELADA</strong>
-    </td>
-  </tr>
+    <h1 class="nombre-categoria">
+        BEBIDAS
+    </h1>
 
-  <tr>
-    <th colspan="2">REFRESCANTES</th>
-  </tr>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/limonadaclasica.png" alt="Limonada clásica" width="70"></td>
-    <td>
-      <strong>LIMONADA CLÁSICA</strong><br>
-      Vaso · ½ jarra · Jarra 1L
-    </td>
-  </tr>
+    <!-- =====================================
+         TABLA DE PRODUCTOS
+         ===================================== -->
 
-  <tr>
-    <td><img src="./imagenes_bebidas/limonadaespecial.png" alt="Limonada especial" width="70"></td>
-    <td>
-      <strong>LIMONADA ESPECIAL</strong><br>
-      Frutos rojos / Maracuyá / Limón con frutilla · Vaso · ½ jarra · Jarra 1L
-    </td>
-  </tr>
+    <table class="carta-productos">
 
-  <tr>
-    <th colspan="2">CREMOSOS</th>
-  </tr>
+        <tbody>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/milckshake.png" alt="Milkshake" width="70"></td>
-    <td>
-      <strong>MILKSHAKE</strong><br>
-      Chocolate blanco y caramelo / Oreo y dulce de leche
-    </td>
-  </tr>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/batidoconhelado.png" alt="Batido con helado" width="70"></td>
-    <td>
-      <strong>BATIDO CON HELADO</strong>
-    </td>
-  </tr>
+            <!-- =====================================
+                 FRUTALES
+                 ===================================== -->
 
-  <tr>
-    <td><img src="./imagenes_bebidas/frapuchino.png" alt="Frapuchino" width="70"></td>
-    <td>
-      <strong>FRAPUCHINO</strong>
-    </td>
-  </tr>
+            <tr>
+                <th colspan="2">
+                    FRUTALES
+                </th>
+            </tr>
 
-  <tr>
-    <th colspan="2">CLÁSICOS</th>
-  </tr>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/agua.png" alt="Agua Mineral" width="70"></td>
-    <td>
-      <strong>AGUA MINERAL</strong><br>
-      Con gas / Saborizada
-    </td>
-  </tr>
+            <tr>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/gaseosa.png" alt="Gaseosas" width="70"></td>
-    <td>
-      <strong>GASEOSAS</strong>
-    </td>
-  </tr>
+                <td>
+                    <img
+                        src="./imagenes_bebidas/licuadodefruta.png"
+                        alt="Licuado de frutas"
+                    >
+                </td>
 
-  <tr>
-    <td><img src="./imagenes_bebidas/cerveza.png" alt="Cerveza" width="70"></td>
-    <td>
-      <strong>CERVEZA</strong><br>
-      Corona 500 ml · Quilmes / Brahma 500 ml
-    </td>
-  </tr>
+                <td>
+                    <strong>LICUADO DE FRUTAS</strong>
 
-</table>
+                    <span class="descripcion-producto">
+                        Durazno · Banana · Frutilla · Ananá · Multifruta
+                    </span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/smuti.png"
+                        alt="Smoothies"
+                    >
+                </td>
+
+                <td>
+                    <strong>SMOOTHIES</strong>
+
+                    <span class="descripcion-producto">
+                        Consultar variedad
+                    </span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/jugodenaranja.png"
+                        alt="Jugo de naranja"
+                    >
+                </td>
+
+                <td>
+                    <strong>JUGO DE NARANJA</strong>
+
+                    <span class="descripcion-producto">
+                        Chico · Mediano · Grande
+                    </span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/pomelada.png"
+                        alt="Pomelada"
+                    >
+                </td>
+
+                <td>
+                    <strong>POMELADA</strong>
+                </td>
+
+            </tr>
+
+
+
+            <!-- =====================================
+                 REFRESCANTES
+                 ===================================== -->
+
+            <tr>
+                <th colspan="2">
+                    REFRESCANTES
+                </th>
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/limonadaclasica.png"
+                        alt="Limonada clásica"
+                    >
+                </td>
+
+                <td>
+                    <strong>LIMONADA CLÁSICA</strong>
+
+                    <span class="descripcion-producto">
+                        Vaso · ½ jarra · Jarra 1L
+                    </span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/limonadaespecial.png"
+                        alt="Limonada especial"
+                    >
+                </td>
+
+                <td>
+                    <strong>LIMONADA ESPECIAL</strong>
+
+                    <span class="descripcion-producto">
+                        Frutos rojos · Maracuyá · Limón con frutilla ·
+                        Vaso · ½ jarra · Jarra 1L
+                    </span>
+                </td>
+
+            </tr>
+
+
+
+            <!-- =====================================
+                 CREMOSOS
+                 ===================================== -->
+
+            <tr>
+                <th colspan="2">
+                    CREMOSOS
+                </th>
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/milckshake.png"
+                        alt="Milkshake"
+                    >
+                </td>
+
+                <td>
+                    <strong>MILKSHAKE</strong>
+
+                    <span class="descripcion-producto">
+                        Chocolate blanco y caramelo · Oreo y dulce de leche
+                    </span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/batidoconhelado.png"
+                        alt="Batido con helado"
+                    >
+                </td>
+
+                <td>
+                    <strong>BATIDO CON HELADO</strong>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/frapuchino.png"
+                        alt="Frapuchino"
+                    >
+                </td>
+
+                <td>
+                    <strong>FRAPUCHINO</strong>
+                </td>
+
+            </tr>
+
+
+
+            <!-- =====================================
+                 CLÁSICOS
+                 ===================================== -->
+
+            <tr>
+                <th colspan="2">
+                    CLÁSICOS
+                </th>
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/agua.png"
+                        alt="Agua mineral"
+                    >
+                </td>
+
+                <td>
+                    <strong>AGUA MINERAL</strong>
+
+                    <span class="descripcion-producto">
+                        Con gas · Saborizada
+                    </span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/gaseosa.png"
+                        alt="Gaseosas"
+                    >
+                </td>
+
+                <td>
+                    <strong>GASEOSAS</strong>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <img
+                        src="./imagenes_bebidas/cerveza.png"
+                        alt="Cerveza"
+                    >
+                </td>
+
+                <td>
+                    <strong>CERVEZA</strong>
+
+                    <span class="descripcion-producto">
+                        Corona 500 ml · Quilmes 500 ml · Brahma 500 ml
+                    </span>
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
 
 </body>
+
 </html>

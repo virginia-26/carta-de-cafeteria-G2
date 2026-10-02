@@ -1,8 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Tortas y Tostados</title>
@@ -14,131 +17,192 @@
 
     <style>
 
+        /* =========================================
+           GENERAL
+           ========================================= */
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
+
             background-color: #f5ead8;
+
             color: #3f2a1e;
+
             font-family: 'Jost', Arial, sans-serif;
         }
 
 
-        /* BOTÓN VOLVER */
+        /* =========================================
+           BOTÓN VOLVER
+           ========================================= */
 
         .volver {
-            display: block;
+            display: inline-block;
+
             width: fit-content;
 
-            margin: 30px auto 35px;
+            margin: 30px 0 30px 55px;
 
-            padding: 15px 34px;
+            padding: 12px 28px;
 
             text-decoration: none;
 
             color: #2f1d14;
+
             background-color: #f2dfc2;
 
             border: 1px solid #ba8248;
+
             border-radius: 35px;
 
-            font-size: 1.15rem;
+            font-size: 1rem;
+
             font-weight: 500;
 
             box-shadow: 0 4px 8px rgba(90, 55, 30, 0.14);
+
+            transition: 0.3s ease;
         }
+
 
         .volver:hover {
-            background-color: #ead1ad;
+            background-color: #ba8248;
+
+            color: white;
+
+            transform: translateY(-2px);
         }
 
 
-        /* ENCABEZADO */
+        /* =========================================
+           ENCABEZADO
+           ========================================= */
 
         header {
-            text-align: center;
-            padding: 0 20px 20px;
+            width: 100%;
+
+            text-align: left;
+
+            padding: 0 55px 25px;
         }
+
 
         header h1 {
             margin: 0;
 
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 3rem;
+
+            font-size: 3.2rem;
+
             letter-spacing: 1px;
 
             color: #154838;
         }
 
+
         header h2 {
-            margin: 5px 0 0;
+            margin: 4px 0 0;
 
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.8rem;
+
+            font-size: 1.9rem;
+
             font-style: italic;
+
             font-weight: 600;
 
             color: #8a5d36;
         }
 
 
-        /* CONTENIDO */
+        /* =========================================
+           CONTENIDO
+           ========================================= */
 
         main {
-            width: 90%;
-            max-width: 760px;
+            width: 100%;
 
-            margin: 0 auto;
+            max-width: none;
 
-            padding-bottom: 50px;
+            margin: 0;
+
+            padding: 0 55px 60px;
         }
 
 
-        /* TÍTULOS DE CADA SECCIÓN */
+        /* =========================================
+           SECCIONES
+           ========================================= */
 
         section {
+            width: 100%;
+
             margin-top: 45px;
         }
 
+
         section > h2 {
-            text-align: center;
+            text-align: left;
 
             margin: 0 0 28px;
 
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2rem;
+
+            font-size: 2.2rem;
 
             color: #154838;
         }
 
 
-        /* TARJETAS */
+        /* =========================================
+           TARJETAS
+           ========================================= */
 
         .producto {
+            width: 100%;
+
             display: flex;
+
             align-items: center;
 
-            min-height: 190px;
+            min-height: 180px;
 
             margin-bottom: 16px;
-            padding: 38px 45px;
+
+            padding: 25px 35px;
 
             background-color: #fffaf3;
 
             border: 1px solid #e5caa6;
-            border-radius: 17px;
+
+            border-radius: 16px;
+
+            transition: 0.3s ease;
         }
 
 
-        /* IMÁGENES */
+        .producto:hover {
+            transform: translateY(-2px);
+
+            box-shadow: 0 5px 12px rgba(90, 55, 30, 0.08);
+        }
+
+
+        /* =========================================
+           IMÁGENES
+           ========================================= */
 
         .producto img {
-            width: 115px;
-            height: 115px;
+            width: 135px;
+
+            height: 135px;
 
             object-fit: cover;
+
             object-position: center;
 
             flex-shrink: 0;
@@ -147,62 +211,155 @@
         }
 
 
-        /* TEXTO */
+        /* =========================================
+           TEXTO
+           ========================================= */
 
         .info {
-            padding-left: 50px;
+            flex: 1;
+
+            padding-left: 40px;
         }
+
 
         .info h3 {
             margin: 0;
 
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.55rem;
+
+            font-size: 1.5rem;
+
             font-weight: 600;
 
             color: #174b3c;
         }
 
 
-        /* CELULAR */
+        /* =========================================
+           PANTALLAS MEDIANAS
+           ========================================= */
+
+        @media (max-width: 900px) {
+
+            .volver {
+                margin-left: 30px;
+            }
+
+
+            header {
+                padding-left: 30px;
+
+                padding-right: 30px;
+            }
+
+
+            main {
+                padding-left: 30px;
+
+                padding-right: 30px;
+            }
+
+
+            header h1 {
+                font-size: 2.7rem;
+            }
+
+
+            header h2 {
+                font-size: 1.6rem;
+            }
+
+
+            section > h2 {
+                font-size: 2rem;
+            }
+
+
+            .producto {
+                padding: 22px 25px;
+            }
+
+
+            .producto img {
+                width: 115px;
+
+                height: 115px;
+            }
+
+
+            .info {
+                padding-left: 28px;
+            }
+
+        }
+
+
+        /* =========================================
+           CELULARES
+           ========================================= */
 
         @media (max-width: 650px) {
 
             .volver {
-                margin-top: 22px;
-                margin-bottom: 30px;
+                display: block;
+
+                margin: 22px auto 30px;
 
                 padding: 12px 25px;
 
                 font-size: 1rem;
             }
 
+
+            header {
+                text-align: center;
+
+                padding: 0 20px 20px;
+            }
+
+
             header h1 {
                 font-size: 2.4rem;
             }
+
 
             header h2 {
                 font-size: 1.5rem;
             }
 
+
             main {
                 width: 92%;
+
+                margin: 0 auto;
+
+                padding: 0 0 45px;
             }
 
+
+            section > h2 {
+                text-align: center;
+            }
+
+
             .producto {
-                padding: 25px 22px;
+                padding: 20px;
 
                 min-height: 150px;
             }
 
+
             .producto img {
                 width: 95px;
+
                 height: 95px;
             }
 
+
             .info {
-                padding-left: 25px;
+                padding-left: 22px;
             }
+
 
             .info h3 {
                 font-size: 1.25rem;
@@ -210,6 +367,10 @@
 
         }
 
+
+        /* =========================================
+           CELULARES MUY CHICOS
+           ========================================= */
 
         @media (max-width: 450px) {
 
@@ -221,12 +382,15 @@
                 padding: 25px;
             }
 
+
             .producto img {
                 width: 130px;
+
                 height: 130px;
 
                 margin-bottom: 20px;
             }
+
 
             .info {
                 padding-left: 0;
@@ -242,14 +406,18 @@
 <body>
 
 
-    <!-- ÚNICO BOTÓN DE NAVEGACIÓN -->
+    <!-- =====================================
+         BOTÓN VOLVER
+         ===================================== -->
 
     <a href="listaproductos.html" class="volver">
         ← Volver al inicio
     </a>
 
 
-    <!-- ENCABEZADO -->
+    <!-- =====================================
+         ENCABEZADO
+         ===================================== -->
 
     <header>
 
@@ -260,10 +428,16 @@
     </header>
 
 
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+         ===================================== -->
+
     <main>
 
 
-        <!-- TORTAS -->
+        <!-- =====================================
+             TORTAS
+             ===================================== -->
 
         <section>
 
@@ -384,8 +558,9 @@
         </section>
 
 
-
-        <!-- TOSTADOS -->
+        <!-- =====================================
+             TOSTADOS
+             ===================================== -->
 
         <section>
 
@@ -450,8 +625,9 @@
         </section>
 
 
-
-        <!-- MAFALDA -->
+        <!-- =====================================
+             MAFALDA
+             ===================================== -->
 
         <section>
 
@@ -488,8 +664,9 @@
         </section>
 
 
-
-        <!-- TOSTADO DE CHIPÁ -->
+        <!-- =====================================
+             TOSTADO DE CHIPÁ
+             ===================================== -->
 
         <section>
 
@@ -511,9 +688,7 @@
 
         </section>
 
-
     </main>
-
 
 </body>
 
