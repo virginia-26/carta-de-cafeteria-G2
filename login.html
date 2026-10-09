@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 
-<head>
+<head> <!--  (no se ve en la página) -->
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wöllen - Mi cuenta</title>
+
 
     <link rel="stylesheet" href="./archivos_css/login.css">
 </head>
 
 <body>
+    <!-- =====================================
+         ENCABEZADO
+         ===================================== -->
 
+    <!--  el contenido principal de la página -->
     <main class="login-section">
 
+       
         <div class="login-container">
 
+            
+            <!-- existen para que
+                 login.js pueda cambiar estos textos al pasar de login a registro -->
             <div class="login-header">
                 <h1>Wöllen</h1>
                 <h2 id="tituloFormulario">Iniciar sesión</h2>
@@ -24,13 +36,17 @@
             </div>
 
 
-            <!-- INICIAR SESIÓN -->
-
+            <!-- BLOQUE 2: FORMULARIO DE INICIAR SESIÓN -->
+            <!--  agrupa los campos que la persona completa -->
             <form id="loginForm" class="login-form">
 
+               
                 <div class="form-group">
+                    <!--  está unido al input por el id; al hacer clic en el texto se activa el campo -->
                     <label for="loginEmail">Correo electrónico</label>
 
+                
+        
                     <input
                         type="email"
                         id="loginEmail"
@@ -41,6 +57,7 @@
                 </div>
 
 
+                <!-- Campo de contraseña -->
                 <div class="form-group">
                     <label for="loginPassword">Contraseña</label>
 
@@ -55,6 +72,7 @@
                 </div>
 
 
+                <!-- Casilla para ver la contraseña (login.js cambia el tipo del campo) -->
                 <div class="password-option">
 
                     <input
@@ -69,20 +87,25 @@
                 </div>
 
 
+                <!-- type="submit": al hacer clic se envía el formulario
+                     (login.js lo recibe y comprueba los datos) -->
                 <button type="submit" class="login-button">
                     Iniciar sesión
                 </button>
 
 
+                <!-- Párrafo vacío: login.js escribe acá los mensajes -->
+                   
                 <p id="loginMessage" class="form-message"></p>
 
             </form>
 
 
-            <!-- REGISTRO -->
-
+            <!-- BLOQUE 3: FORMULARIO DE REGISTRO -->
+            <!--  empieza OCULTO. login.js lo muestra cuando la persona hace clic en "Registrate" -->
             <form id="registroForm" class="login-form hidden">
 
+                <!-- Campo de nombre -->
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
 
@@ -96,6 +119,7 @@
                 </div>
 
 
+                <!-- Campo de correo -->
                 <div class="form-group">
                     <label for="registroEmail">
                         Correo electrónico
@@ -111,6 +135,7 @@
                 </div>
 
 
+                <!-- Campo de contraseña -->
                 <div class="form-group">
                     <label for="registroPassword">
                         Contraseña
@@ -127,6 +152,8 @@
                 </div>
 
 
+                <!-- Segundo campo de contraseña: login.js comprueba que
+                     las dos sean iguales, para evitar errores al escribirla -->
                 <div class="form-group">
                     <label for="confirmPassword">
                         Repetir contraseña
@@ -143,6 +170,7 @@
                 </div>
 
 
+                <!-- Casilla para ver las dos contraseñas -->
                 <div class="password-option">
 
                     <input
@@ -157,20 +185,24 @@
                 </div>
 
 
+                <!-- Al hacer clic se envía el formulario y login.js guarda la cuenta -->
                 <button type="submit" class="login-button">
                     Crear cuenta
                 </button>
 
 
+                <!-- Acá login.js escribe los mensajes del registro
+                     (por ejemplo "Las contraseñas no coinciden.") -->
                 <p id="registroMessage" class="form-message"></p>
 
             </form>
 
 
-            <!-- CAMBIAR ENTRE LOGIN Y REGISTRO -->
-
+            <!-- BLOQUE 4: CAMBIAR ENTRE LOGIN Y REGISTRO -->
             <div class="cambiar-formulario">
 
+                <!-- type="button": solo hace clic, NO envía ningún formulario.
+                     login.js escucha este botón y cambia de formulario -->
                 <p id="textoCambio">
                     ¿No tenés una cuenta?
                     <button type="button" id="btnRegistro">
@@ -181,6 +213,7 @@
             </div>
 
 
+            <!-- BLOQUE 5: ENLACE PARA VOLVER A LA PÁGINA DE INICIO -->
             <div class="volver">
                 <a href="inicio.html">
                     ← Volver a Wöllen
@@ -192,6 +225,8 @@
     </main>
 
 
+    <!-- BLOQUE 6: JAVASCRIPT -->
+ 
     <script src="login.js"></script>
 
 </body>

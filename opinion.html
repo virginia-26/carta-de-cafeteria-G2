@@ -1,309 +1,232 @@
-
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="es"> 
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Wöllen - Tu Opinión</title>
-
-    <link rel="stylesheet" href="archivos_css/opinion.css">
+    <title>Wöllen - Mi cuenta</title>
+    <link rel="stylesheet" href="./archivos_css/login.css">
 </head>
 
 <body>
+  
 
-    <!-- =====================================
-         ENCABEZADO
-         ===================================== -->
+    <main class="login-section">
 
-    <header>
+        <div class="login-container">
 
-        <h1>
-            <a href="inicio.html">
-                ← WÖLLEN
-            </a>
-        </h1>
-
-        <h2>
-            Contanos tu opinión
-        </h2>
-
-        <p>
-            Tu experiencia nos ayuda a mejorar cada día.
-        </p>
-
-        <p>
-            <a href="comentarios.html" class="link-volver">
-                Ver opiniones de otros clientes
-            </a>
-        </p>
-
-    </header>
+            <!-- BLOQUE 1: TÍTULO DE LA PÁGINA -->
+            <!-- Los id (tituloFormulario y subtituloFormulario) existen para que
+                 login.js pueda cambiar estos textos al pasar de login a registro -->
+            <div class="login-header">
+                <h1>Wöllen</h1>
+                <h2 id="tituloFormulario">Iniciar sesión</h2>
+                <p id="subtituloFormulario">
+                    Ingresá a tu cuenta para continuar
+                </p>
+            </div>
 
 
-    <!-- =====================================
-         CONTENIDO PRINCIPAL
-         ===================================== -->
+            <!-- BLOQUE 2: FORMULARIO DE INICIAR SESIÓN -->
+            <!-- form: agrupa los campos que la persona completa -->
+            <form id="loginForm" class="login-form">
 
-    <main>
+                <!-- Campo de correo -->
+                <div class="form-group">
+                    <!-- label for: está unido al input por el id; al hacer clic en el texto se activa el campo -->
+                    <label for="loginEmail">Correo electrónico</label>
 
-        <form id="form-opinion">
+                    <!-- type="email": el navegador revisa que tenga formato de correo
+                         required: no deja enviar el campo vacío
+                         placeholder: texto de ayuda gris que desaparece al escribir -->
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="loginEmail"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                    >
+                </div>
 
 
-            <!-- =====================================
-                 DATOS PERSONALES
-                 ===================================== -->
+                <!-- Campo de contraseña -->
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
 
-            <div class="grupo-datos">
+                    <!-- type="password": muestra puntitos en vez de letras
+                         minlength="6": exige mínimo 6 caracteres -->
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="loginPassword"
+                        placeholder="Ingresá tu contraseña"
+                        minlength="6"
+                        required
+                    >
+                </div>
 
-                <div class="campo-formulario">
 
-                    <label for="nombre">
-                        Nombre:
+                <!-- Casilla para ver la contraseña (login.js cambia el tipo del campo) -->
+                <div class="password-option">
+
+                    <input
+                        type="checkbox"
+                        id="mostrarLogin"
+                    >
+
+                    <label for="mostrarLogin">
+                        Mostrar contraseña
                     </label>
+
+                </div>
+
+
+                <!-- type="submit": al hacer clic se envía el formulario
+                     (login.js lo recibe y comprueba los datos) -->
+                <button type="submit" class="login-button">
+                    Iniciar sesión
+                </button>
+
+
+                <!-- Párrafo vacío: login.js escribe acá los mensajes
+                     (por ejemplo "El correo o la contraseña son incorrectos.") -->
+                <p id="loginMessage" class="form-message"></p>
+
+            </form>
+
+
+            <!-- BLOQUE 3: FORMULARIO DE REGISTRO -->
+            <!-- class="hidden": empieza OCULTO. login.js lo muestra cuando
+                 la persona hace clic en "Registrate" -->
+            <form id="registroForm" class="login-form hidden">
+
+                <!-- Campo de nombre -->
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
 
                     <input
                         type="text"
                         id="nombre"
                         name="nombre"
                         placeholder="Tu nombre"
+                        required
                     >
-
                 </div>
 
 
-                <div class="campo-formulario">
-
-                    <label for="apellido">
-                        Apellido:
+                <!-- Campo de correo -->
+                <div class="form-group">
+                    <label for="registroEmail">
+                        Correo electrónico
                     </label>
 
                     <input
-                        type="text"
-                        id="apellido"
-                        name="apellido"
-                        placeholder="Tu apellido"
+                        type="email"
+                        id="registroEmail"
+                        name="registroEmail"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                    >
+                </div>
+
+
+                <!-- Campo de contraseña -->
+                <div class="form-group">
+                    <label for="registroPassword">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registroPassword"
+                        name="registroPassword"
+                        placeholder="Mínimo 6 caracteres"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+
+                <!-- Segundo campo de contraseña: login.js comprueba que
+                     las dos sean iguales, para evitar errores al escribirla -->
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Repetir contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Repetí tu contraseña"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+
+                <!-- Casilla para ver las dos contraseñas -->
+                <div class="password-option">
+
+                    <input
+                        type="checkbox"
+                        id="mostrarRegistro"
                     >
 
-                </div>
-
-            </div>
-
-
-            <!-- =====================================
-                 PRODUCTOS
-                 ===================================== -->
-
-            <fieldset>
-
-                <legend>
-                    ¿Qué producto/s consumiste?
-                </legend>
-
-
-                <div class="opciones-productos">
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="prod-desayunos"
-                            name="producto"
-                            value="Desayunos y Meriendas"
-                        >
-                        Desayunos y Meriendas
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="prod-tortas"
-                            name="producto"
-                            value="Tortas y Tostados"
-                        >
-                        Tortas y Tostados
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="prod-dulces"
-                            name="producto"
-                            value="Dulces, Clásicos y Tentaciones"
-                        >
-                        Dulces, Clásicos y Tentaciones
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="prod-cafeteria"
-                            name="producto"
-                            value="Cafetería"
-                        >
-                        Cafetería
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="prod-bebidas"
-                            name="producto"
-                            value="Bebidas"
-                        >
-                        Bebidas
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="prod-copas"
-                            name="producto"
-                            value="Copas Heladas"
-                        >
-                        Copas Heladas
+                    <label for="mostrarRegistro">
+                        Mostrar contraseña
                     </label>
 
                 </div>
 
-            </fieldset>
 
-
-            <!-- =====================================
-                 CALIFICACIÓN
-                 ===================================== -->
-
-            <fieldset>
-
-                <legend>
-                    Calificación
-                </legend>
-
-
-                <div class="opciones-calificacion">
-
-                    <label>
-                        <input
-                            type="radio"
-                            id="cal-1"
-                            name="calificacion"
-                            value="1"
-                        >
-                        1
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="radio"
-                            id="cal-2"
-                            name="calificacion"
-                            value="2"
-                        >
-                        2
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="radio"
-                            id="cal-3"
-                            name="calificacion"
-                            value="3"
-                        >
-                        3
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="radio"
-                            id="cal-4"
-                            name="calificacion"
-                            value="4"
-                        >
-                        4
-                    </label>
-
-
-                    <label>
-                        <input
-                            type="radio"
-                            id="cal-5"
-                            name="calificacion"
-                            value="5"
-                        >
-                        5
-                    </label>
-
-                </div>
-
-            </fieldset>
-
-
-            <!-- =====================================
-                 COMENTARIO
-                 ===================================== -->
-
-            <div class="campo-formulario campo-comentario">
-
-                <label for="comentario">
-                    Tu comentario:
-                </label>
-
-                <textarea
-                    id="comentario"
-                    name="comentario"
-                    rows="5"
-                    placeholder="Contanos qué te pareció..."
-                ></textarea>
-
-            </div>
-
-
-            <!-- =====================================
-                 BOTÓN
-                 ===================================== -->
-
-            <div class="contenedor-boton">
-
-                <button
-                    type="button"
-                    id="btn-enviar"
-                >
-                    Enviar opinión
+                <!-- Al hacer clic se envía el formulario y login.js guarda la cuenta -->
+                <button type="submit" class="login-button">
+                    Crear cuenta
                 </button>
 
+
+                <!-- Acá login.js escribe los mensajes del registro
+                     (por ejemplo "Las contraseñas no coinciden.") -->
+                <p id="registroMessage" class="form-message"></p>
+
+            </form>
+
+
+            <!-- BLOQUE 4: CAMBIAR ENTRE LOGIN Y REGISTRO -->
+            <div class="cambiar-formulario">
+
+                <!-- type="button": solo hace clic, NO envía ningún formulario.
+                     login.js escucha este botón y cambia de formulario -->
+                <p id="textoCambio">
+                    ¿No tenés una cuenta?
+                    <button type="button" id="btnRegistro">
+                        Registrate
+                    </button>
+                </p>
+
             </div>
 
-        </form>
+
+            <!-- BLOQUE 5: ENLACE PARA VOLVER A LA PÁGINA DE INICIO -->
+            <div class="volver">
+                <a href="inicio.html">
+                    ← Volver a Wöllen
+                </a>
+            </div>
+
+        </div>
 
     </main>
 
 
-    <!-- =====================================
-         FOOTER
-         ===================================== -->
-
-    <footer>
-
-        <p>
-            Wöllen Heladería y Cafetería
-        </p>
-
-    </footer>
-
-
-    <!-- =====================================
-         JAVASCRIPT
-         ===================================== -->
-
-    <script src="opinion.js"></script>
+    <!-- BLOQUE 6: JAVASCRIPT -->
+    <!-- Conecta login.js, que hace funcionar los formularios.
+         Va al final del body para que todos los elementos
+         de arriba ya existan cuando el código los busque -->
+    <script src="login.js"></script>
 
 </body>
 
