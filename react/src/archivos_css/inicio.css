@@ -1,0 +1,807 @@
+/* =====================================
+   WÖLLEN - INICIO
+   DISEÑO ESCRITORIO + RESPONSIVE
+   ===================================== */
+
+
+/* =====================================
+   PALETA DE COLORES
+   ===================================== */
+
+:root {
+    --crema: #F3E9DA;
+    --beige: #E8D3B8;
+    --dorado: #A9824A;
+    --verde: #2C4A32;
+    --espresso: #2B1710;
+    --blanco: #FBF7F0;
+}
+
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--crema);
+    color: var(--espresso);
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================
+   CARRUSEL DE NOVEDADES
+   Rectángulo finito, arriba de todo, ancho completo
+   ===================================== */
+
+.carrusel-novedades {
+    width: 100%;
+    height: 200px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.carrusel-track {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.carrusel-img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    animation: carrusel-fade 20s infinite;
+}
+
+.img1 { animation-delay: 0s; }
+.img2 { animation-delay: 4s; }
+.img3 { animation-delay: 8s; }
+.img4 { animation-delay: 12s; }
+.img5 { animation-delay: 16s; }
+
+@keyframes carrusel-fade {
+    0%   { opacity: 0; }
+    4%   { opacity: 1; }
+    16%  { opacity: 1; }
+    20%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.carrusel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: linear-gradient(
+        0deg,
+        rgba(43, 23, 16, 0.75) 0%,
+        rgba(43, 23, 16, 0) 100%
+    );
+
+    padding: 16px 20px 10px;
+
+    text-align: center;
+}
+
+.carrusel-overlay p {
+    color: var(--blanco);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+header {
+    width: 100%;
+
+    background-color: var(--crema);
+
+    border-bottom: 1px solid var(--beige);
+}
+
+
+/* CONTENIDO INTERNO DEL HEADER */
+
+.header-contenido {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 50px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   LOGO
+   ===================================== */
+
+.logo {
+    width: 135px;
+    height: 135px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================
+   TEXTO DEL HEADER
+   ===================================== */
+
+.header-texto h1 {
+    color: var(--espresso);
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 5px;
+}
+
+
+.header-texto p {
+    color: var(--verde);
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* =====================================
+   NAVEGACIÓN
+   ===================================== */
+
+.nav-principal {
+    width: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+    padding: 12px 18px;
+
+    border-top: 1px solid var(--dorado);
+    border-bottom: 1px solid var(--dorado);
+}
+
+
+/* BOTONES DEL NAV */
+
+.nav-principal a {
+    display: inline-block;
+
+    padding: 10px 24px;
+
+    background-color: var(--verde);
+
+    color: var(--blanco);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    border: 2px solid var(--verde);
+    border-radius: 25px;
+
+    transition: 0.3s ease;
+}
+
+
+.nav-principal a:hover {
+    background-color: var(--dorado);
+
+    border-color: var(--dorado);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+   ===================================== */
+
+main {
+    width: 100%;
+}
+
+
+/* =====================================
+   PRESENTACIÓN
+   ===================================== */
+
+.presentacion {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 50px 40px;
+
+    background-color: var(--crema);
+
+    text-align: center;
+}
+
+
+/* BLOQUE CENTRAL */
+
+.contenido-presentacion {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =====================================
+   TÍTULO PRINCIPAL
+   ===================================== */
+
+.presentacion h2 {
+    color: var(--espresso);
+
+    font-family: Georgia, serif;
+
+    font-size: 54px;
+    font-weight: bold;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================
+   SUBTÍTULO
+   ===================================== */
+
+.presentacion h3 {
+    color: var(--verde);
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+    font-style: italic;
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   LÍNEA DECORATIVA
+   ===================================== */
+
+.presentacion hr {
+    width: 85px;
+
+    border: none;
+
+    border-top: 2px solid var(--dorado);
+
+    margin: 0 auto 24px;
+}
+
+
+/* =====================================
+   FRASE PRINCIPAL
+   ===================================== */
+
+.frase-principal {
+    color: var(--dorado);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   DESCRIPCIÓN
+   ===================================== */
+
+.descripcion {
+    width: 100%;
+    max-width: 690px;
+
+    color: var(--espresso);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+   BOTÓN VER LA CARTA
+   ===================================== */
+
+.acciones {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.boton-carta {
+    display: inline-block;
+
+    background-color: var(--verde);
+
+    color: var(--blanco);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    padding: 14px 32px;
+
+    border: 1px solid var(--verde);
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+}
+
+
+.boton-carta:hover {
+    background-color: var(--dorado);
+
+    border-color: var(--dorado);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   VIDEO
+   ===================================== */
+
+.seccion-video {
+    width: 100%;
+
+    padding: 40px 50px 80px;
+
+    background: linear-gradient(
+        180deg,
+        var(--crema) 0%,
+        var(--beige) 100%
+    );
+}
+
+
+.contenido-video {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.video-etiqueta {
+    color: var(--dorado);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.video-titulo {
+    color: var(--espresso);
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    margin-bottom: 14px;
+}
+
+
+.seccion-video hr {
+    width: 85px;
+
+    border: none;
+
+    border-top: 2px solid var(--dorado);
+
+    margin: 0 auto 32px;
+}
+
+
+/* MARCO DEL VIDEO */
+
+.video-marco {
+    width: 100%;
+
+    padding: 10px;
+
+    background: linear-gradient(
+        135deg,
+        var(--dorado) 0%,
+        var(--verde) 100%
+    );
+
+    border-radius: 18px;
+
+    box-shadow: 0 14px 35px rgba(43, 23, 16, 0.28);
+
+    overflow: hidden;
+}
+
+
+/* IFRAME DEL VIDEO */
+
+.video-wollen {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    border: none;
+
+    background-color: var(--espresso);
+
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    width: 100%;
+
+    background-color: var(--espresso);
+
+    color: var(--blanco);
+
+    text-align: center;
+
+    padding: 27px 20px;
+}
+
+
+footer p {
+    color: var(--blanco);
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+    font-style: italic;
+
+    margin: 0;
+}
+
+
+/* =====================================
+   PANTALLAS MEDIANAS
+   ===================================== */
+
+@media (max-width: 900px) {
+
+    .header-contenido {
+        padding: 26px 30px 22px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-texto h1 {
+        font-size: 33px;
+    }
+
+    .presentacion {
+        padding: 50px 30px 35px;
+    }
+
+    .presentacion h2 {
+        font-size: 46px;
+    }
+
+    .presentacion h3 {
+        font-size: 22px;
+    }
+
+    .descripcion {
+        max-width: 620px;
+    }
+
+    /* VIDEO */
+
+    .seccion-video {
+        padding: 35px 30px 65px;
+    }
+
+    .video-titulo {
+        font-size: 33px;
+    }
+}
+
+
+/* =====================================
+   CELULARES
+   ===================================== */
+
+@media (max-width: 600px) {
+
+    .header-contenido {
+        padding: 22px 18px;
+    }
+
+    .logo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .header-texto h1 {
+        font-size: 29px;
+
+        letter-spacing: 4px;
+    }
+
+    .header-texto p {
+        font-size: 16px;
+    }
+
+    .nav-principal {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 12px 5px;
+    }
+
+    .nav-principal a {
+        padding: 9px 17px;
+
+        font-size: 12px;
+    }
+
+    .presentacion {
+        padding: 40px 20px 30px;
+    }
+
+    .presentacion h2 {
+        font-size: 36px;
+
+        letter-spacing: 4px;
+    }
+
+    .presentacion h3 {
+        font-size: 18px;
+
+        line-height: 1.4;
+    }
+
+    .presentacion hr {
+        width: 60px;
+    }
+
+    .frase-principal {
+        font-size: 14px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .descripcion {
+        max-width: 360px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .boton-carta {
+        padding: 12px 26px;
+
+        font-size: 13px;
+    }
+
+    /* VIDEO */
+
+    .seccion-video {
+        padding: 30px 18px 50px;
+    }
+
+    .video-etiqueta {
+        font-size: 14px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .video-titulo {
+        font-size: 28px;
+    }
+
+    .seccion-video hr {
+        width: 60px;
+
+        margin-bottom: 24px;
+    }
+
+    .video-marco {
+        padding: 6px;
+
+        border-radius: 14px;
+    }
+
+    .video-wollen {
+        border-radius: 9px;
+    }
+
+    /* CARRUSEL - bien finito en celular */
+    .carrusel-novedades {
+        height: 120px;
+    }
+
+    .carrusel-overlay p {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    .carrusel-overlay {
+        padding: 10px 14px 6px;
+    }
+}
+
+
+/* =====================================
+   CELULARES MUY CHICOS
+   ===================================== */
+
+@media (max-width: 360px) {
+
+    .header-contenido {
+        padding: 18px 12px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-texto h1 {
+        font-size: 26px;
+    }
+
+    .header-texto p {
+        font-size: 14px;
+    }
+
+    .nav-principal a {
+        padding: 8px 13px;
+
+        font-size: 11px;
+    }
+
+    .presentacion {
+        padding: 35px 15px 25px;
+    }
+
+    .presentacion h2 {
+        font-size: 31px;
+    }
+
+    .presentacion h3 {
+        font-size: 17px;
+    }
+
+    .descripcion {
+        font-size: 13px;
+    }
+
+    /* VIDEO */
+
+    .seccion-video {
+        padding: 25px 12px 40px;
+    }
+
+    .video-titulo {
+        font-size: 24px;
+    }
+}

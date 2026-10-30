@@ -1,0 +1,155 @@
+:root {
+  --crema: #F3E9DA;
+  --beige: #E8D3B8;
+  --dorado: #A9824A;
+  --verde: #2C4A32;
+  --espresso: #2B1710;
+  --blanco: #FBF7F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 50px 60px;
+  background-color: var(--crema);
+  font-family: 'Jost', sans-serif;
+}
+
+/* Botón de volver a la carta */
+.titulo-categoria {
+  width: 100%;
+  margin: 0 0 25px;
+  text-align: left;
+}
+
+.volver-categoria {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: var(--espresso);
+  text-decoration: none;
+  background-color: var(--beige);
+  border: 1px solid var(--dorado);
+  border-radius: 30px;
+  padding: 10px 22px;
+  box-shadow: 0 2px 4px rgba(43, 23, 16, 0.1);
+}
+
+.volver-categoria:hover {
+  background-color: var(--dorado);
+  color: var(--blanco);
+}
+
+/* Nombre grande de la categoría */
+.nombre-categoria {
+  width: 100%;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: var(--verde);
+  margin: 0 0 30px;
+}
+
+/* Tabla general */
+.carta-productos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin: 0;
+}
+
+/* Encabezados de sección */
+.carta-productos th {
+  background-color: var(--verde);
+  color: var(--blanco);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-align: left;
+  padding: 13px 20px;
+  border-radius: 8px;
+}
+
+/* Filas de productos */
+.carta-productos tr:has(td) {
+  background-color: var(--blanco);
+}
+
+/* Celdas */
+.carta-productos td {
+  padding: 14px 20px;
+  background-color: var(--blanco);
+  border-top: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+  vertical-align: middle;
+}
+
+/* Primera celda */
+.carta-productos td:first-child {
+  width: 140px;
+  border-left: 1px solid var(--beige);
+  border-radius: 12px 0 0 12px;
+}
+
+/* Última celda */
+.carta-productos td:last-child {
+  border-right: 1px solid var(--beige);
+  border-radius: 0 12px 12px 0;
+}
+
+/* Imágenes */
+.carta-productos td img {
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Nombre del producto */
+.carta-productos strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--verde);
+  margin-bottom: 6px;
+}
+
+/* Descripción */
+.carta-productos td:last-child {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--espresso);
+  line-height: 1.5;
+}
+
+/* Adaptación solamente para pantallas chicas */
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+  }
+
+  .nombre-categoria {
+    font-size: 1.8rem;
+  }
+
+  .carta-productos td:first-child {
+    width: 100px;
+  }
+
+  .carta-productos td img {
+    width: 75px;
+    height: 75px;
+  }
+}
