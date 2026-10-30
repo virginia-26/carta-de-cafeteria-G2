@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./archivos_css/copasheladas.css";
+
 
 // Lista de productos: cada uno tiene nombre, imagen y descripción
 const copas = [

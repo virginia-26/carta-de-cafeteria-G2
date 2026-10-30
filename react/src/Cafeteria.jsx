@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Link } from "react-router";
-import "./archivos_css/cafeteria.css";
+
 
 // Cada sección tiene un título y su lista de productos
 const secciones = [

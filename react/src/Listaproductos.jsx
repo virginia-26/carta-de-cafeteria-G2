@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./archivos_css/listaproductos.css";
+
 
 function ListaProductos() {
   return (

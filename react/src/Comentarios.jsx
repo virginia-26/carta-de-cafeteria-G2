@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./archivos_css/opinion.css";
+
 
 function Comentarios() {
   // Leemos las opiniones guardadas (o una lista vacía si no hay ninguna)

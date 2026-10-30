@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./archivos_css/desayunos-meriendas.css";
+
 
 // Cada sección tiene un título y su lista de productos (la ruta es relativa a imagenes_desayunos_meriendas)
 const secciones = [
