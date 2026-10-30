@@ -1,0 +1,477 @@
+/* =========================================
+   WÖLLEN - LOGIN
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #4d4034;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e8dfc9 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #d7cdb5 0%,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f8f5ed,
+            #e9e2d2
+        );
+}
+
+
+/* =========================================
+   SECCIÓN PRINCIPAL
+========================================= */
+
+.login-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* CÍRCULOS DECORATIVOS */
+
+.login-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    background: #d6ccb5;
+
+    border-radius: 50%;
+
+    top: -120px;
+    left: -100px;
+
+    opacity: 0.45;
+}
+
+.login-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    background: #c8bea7;
+
+    border-radius: 50%;
+
+    bottom: -150px;
+    right: -120px;
+
+    opacity: 0.35;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.login-container {
+    width: 100%;
+    max-width: 460px;
+
+    padding: 45px 42px;
+
+    background: rgba(255, 253, 247, 0.95);
+
+    border: 1px solid #d5cbb7;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(70, 60, 45, 0.16);
+
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    z-index: 2;
+
+    animation: aparecer 0.7s ease;
+}
+
+
+/* =========================================
+   ANIMACIÓN
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 48px;
+
+    color: #59634a;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+.login-header h2 {
+    font-size: 25px;
+
+    color: #57483a;
+
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #887b69;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+.login-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* CAMPOS */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #57483a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1.5px solid #d5cbb7;
+
+    border-radius: 13px;
+
+    background: #fcfaf5;
+
+    color: #4d4034;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input::placeholder {
+    color: #aaa18f;
+}
+
+.form-group input:hover {
+    border-color: #aaa28e;
+}
+
+.form-group input:focus {
+    background: white;
+
+    border-color: #697457;
+
+    box-shadow:
+        0 0 0 4px rgba(105, 116, 87, 0.12);
+}
+
+
+/* =========================================
+   MOSTRAR CONTRASEÑA
+========================================= */
+
+.password-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: -4px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #887b69;
+}
+
+.password-option input {
+    accent-color: #697457;
+
+    cursor: pointer;
+}
+
+.password-option label {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.login-button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #697457,
+            #4f5b42
+        );
+
+    color: #fffdf7;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(70, 80, 58, 0.25);
+
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 22px rgba(70, 80, 58, 0.32);
+
+    background:
+        linear-gradient(
+            135deg,
+            #59654a,
+            #414d36
+        );
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+.form-message {
+    min-height: 18px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CAMBIAR ENTRE LOGIN Y REGISTRO
+========================================= */
+
+.cambiar-formulario {
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #ddd5c5;
+}
+
+.cambiar-formulario p {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #887b69;
+}
+
+.cambiar-formulario button {
+    border: none;
+
+    background: none;
+
+    color: #59634a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-left: 4px;
+}
+
+.cambiar-formulario button:hover {
+    color: #3f4b34;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   VOLVER
+========================================= */
+
+.volver {
+    text-align: center;
+
+    margin-top: 18px;
+}
+
+.volver a {
+    color: #697457;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.volver a:hover {
+    color: #3f4b34;
+}
+
+
+/* =========================================
+   OCULTAR
+========================================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .login-section {
+        padding: 25px 15px;
+    }
+
+    .login-container {
+        padding: 35px 22px;
+
+        border-radius: 24px;
+    }
+
+    .login-header h1 {
+        font-size: 40px;
+    }
+
+    .login-header h2 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 13px;
+    }
+
+    .login-button {
+        padding: 14px;
+    }
+
+}
