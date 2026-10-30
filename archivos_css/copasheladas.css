@@ -1,3 +1,12 @@
+/* =========================================
+   COPAS HELADAS - ESTILOS
+   ========================================= */
+
+
+/* =========================================
+   COLORES (variables)
+   ========================================= */
+
 :root {
   --crema: #F3E9DA;
   --beige: #E8D3B8;
@@ -6,6 +15,11 @@
   --espresso: #2B1710;
   --blanco: #FBF7F0;
 }
+
+
+/* =========================================
+   REGLAS GENERALES (todos los elementos y el fondo de la página)
+   ========================================= */
 
 * {
   box-sizing: border-box;
@@ -192,7 +206,7 @@ body {
 
 
 /* =========================================
-   EFECTO AL PASAR EL MOUSE
+   EFECTO AL PASAR EL MOUSE (hover en las filas)
    ========================================= */
 
 .carta-productos tr {
@@ -205,7 +219,7 @@ body {
 
 
 /* =========================================
-   PANTALLAS MEDIANAS
+   PANTALLAS MEDIANAS (tablet, 1000px o menos)
    ========================================= */
 
 @media (max-width: 1000px) {
@@ -238,7 +252,7 @@ body {
 
 
 /* =========================================
-   CELULARES
+   CELULARES (600px o menos: la tabla pasa a tarjetas)
    ========================================= */
 
 @media (max-width: 600px) {
