@@ -1,5 +1,6 @@
-import "./archivos_css/inicio.css";
+
 import { Link } from "react-router";
+import SeccionesMui from "./components/SeccionesMui.jsx";
 function Inicio() {
   return (
     <>
@@ -92,6 +93,7 @@ function Inicio() {
             </div>
           </div>
         </section>
+        <SeccionesMui />
       </main>
 
       {/* BLOQUE 5 - PIE DE PÁGINA */}

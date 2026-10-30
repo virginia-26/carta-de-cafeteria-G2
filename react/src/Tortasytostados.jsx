@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./archivos_css/tortasytostados.css";
+
 
 // Cada sección tiene un título y su lista de productos (la ruta es relativa a imagenes_tortas_tostados)
 const secciones = [

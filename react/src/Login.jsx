@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import "./archivos_css/login.css";
+
 
 function Login() {
   // Qué formulario se ve: "login" o "registro"

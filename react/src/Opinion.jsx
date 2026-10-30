@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router";
-import "./archivos_css/opinion.css";
 
 // Opciones de productos (checkboxes)
 const productosLista = [

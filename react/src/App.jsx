@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router";
 import Inicio from "./Inicio.jsx";
 import ListaProductos from "./Listaproductos.jsx";
 import CopasHeladas from "./Copasheladas.jsx";
@@ -11,9 +12,53 @@ import Login from "./Login.jsx";
 import Opinion from "./Opinion.jsx";
 import Comentarios from "./Comentarios.jsx";
 
+import inicioCss from "./archivos_css/inicio.css?url";
+import listaproductosCss from "./archivos_css/listaproductos.css?url";
+import copasheladasCss from "./archivos_css/copasheladas.css?url";
+import bebidasCss from "./archivos_css/bebidas.css?url";
+import cafeteriaCss from "./archivos_css/cafeteria.css?url";
+import dulcesCss from "./archivos_css/dulces.css?url";
+import tortasCss from "./archivos_css/tortasytostados.css?url";
+import desayunosCss from "./archivos_css/desayunos-meriendas.css?url";
+import loginCss from "./archivos_css/login.css?url";
+import opinionCss from "./archivos_css/opinion.css?url";
+
+const estilosPorRuta = {
+  "/": inicioCss,
+  "/carta": listaproductosCss,
+  "/copas-heladas": copasheladasCss,
+  "/bebidas": bebidasCss,
+  "/cafeteria": cafeteriaCss,
+  "/dulces": dulcesCss,
+  "/tortas-tostados": tortasCss,
+  "/desayunos-meriendas": desayunosCss,
+  "/login": loginCss,
+  "/opinion": opinionCss,
+  "/comentarios": opinionCss,
+};
+
+function Estilos() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const href = estilosPorRuta[pathname];
+    if (!href) return;
+
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+
+    return () => link.remove();
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <Estilos />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/carta" element={<ListaProductos />} />
