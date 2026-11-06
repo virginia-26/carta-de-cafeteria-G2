@@ -20,6 +20,11 @@ function Comentarios() {
             Dejar mi propia opinión
           </Link>
         </p>
+                <p>
+          <Link to="/" className="link-volver">
+            ← Volver al inicio
+          </Link>
+        </p>
       </header>
 
       {/* CONTENIDO PRINCIPAL */}
